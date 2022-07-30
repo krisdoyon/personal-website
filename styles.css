@@ -1,0 +1,42 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-image:linear-gradient(to top left,#a9ffe4,#e8e8e8);
+  height: 100vh;
+  color:black
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-size:16px;
+  font-weight: bold;
+}
+
+.nav-button {
+  width:200px;
+  height:100px;
+  background-color: #cfcfcf;
+  border:none;
+}
+
+.nav-button:hover {
+  background-color:#7afbd2;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.projects {
+  list-style-type: square;
+}
+.project-link {
+  color:#5e5e5e;
+  font-size:25px;
+  font-weight:bold;
+}
