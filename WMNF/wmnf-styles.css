@@ -1,0 +1,83 @@
+body {
+  color: #444;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-top:10px solid #6fca6f;
+}
+
+h1,
+h2,
+h3 {
+  color: #6fca6f;
+}
+
+h1 {
+  font-size: 32px;
+  color:black;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+p {
+  line-height: 1.5;
+}
+
+#author {
+  font-style: italic;
+  font-size: 18px;
+}
+
+#copyright {
+  font-size: 14px;
+}
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.additional {
+  list-style: none;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #6fca6f;
+  border-bottom: 5px solid #6fca6f;
+}
+
+/* Styling Links 
+alwlays in this order LVHA*/
+
+a:link {
+  color: #6fca6f;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #6fca6f;
+}
+
+a:hover {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+a:active {
+  background-color: black;
+  font-style: italic;
+}
+
