@@ -23,9 +23,9 @@ h1 {
 
 .nav-button:hover {
   background-color: #7afbd2;
-  color:black;
+  color: black;
   text-transform: lowercase;
-  cursor:pointer;
+  cursor: pointer;
 }
 
 .return-button {
@@ -43,10 +43,10 @@ h1 {
 
 .return-button:hover {
   background-color: #7afbd2;
-  color:black;
+  color: black;
   text-transform: lowercase;
-  cursor:pointer;
-  }
+  cursor: pointer;
+}
 
 h2 {
   font-size: 40px;
@@ -69,4 +69,8 @@ h2 {
   font-size: 25px;
   font-weight: bold;
   text-decoration: none;
+}
+
+li {
+  margin-bottom: 15px;
 }
