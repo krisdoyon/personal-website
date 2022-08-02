@@ -12,6 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: rgb(93, 118, 147);
 }
 
 .calculator {
@@ -29,7 +30,7 @@ body {
   padding-right: 15px;
   background-color: rgb(178, 201, 119, 0.7);
   border-radius: 15px;
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 .button-grid {
