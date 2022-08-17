@@ -61,3 +61,15 @@ body {
 .btn-submit {
   background-color: #000;
 }
+
+#change-button {
+  background-color: #bbb;
+  border-radius: 0.8rem;
+  height: 2rem;
+  color: white;
+  font-weight: bold;
+}
+
+.theme-label {
+  color:#ddd;
+}

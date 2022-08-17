@@ -72,6 +72,10 @@ const evaluateExpression = function (expression) {
   return Math.round(eval(evaluatedExpression) * 10000) / 10000;
 };
 
+const resetCurrentNumber = function () {
+  currentNumber = '';
+};
+
 // Function to update booleans after each button press
 const updateBools = function (buttonType) {
   equalPress = false;
@@ -122,11 +126,15 @@ for (let i = 0; i < buttons.length; i++) {
 
         // Delete button
       } else if (buttons[i] === getElement('#btn-delete')) {
-        currentNumber = currentNumber.slice(0, -1);
-        resetNumberDisplay();
-        updateDisplay(getElement('.number-display'), currentNumber);
-        updateBools('clear');
-
+        if (currentNumber) {
+          currentNumber = currentNumber.slice(0, -1);
+          resetNumberDisplay();
+          updateDisplay(getElement('.number-display'), currentNumber);
+          updateBools('clear');
+        } else {
+          resetExpression();
+          resetAllDisplay();
+        }
         // Equals button //////////////////////////////////////////////////////////////////////////////////////////
       } else if (buttons[i] === getElement('#btn-equals')) {
         updateExpression(currentNumber);
@@ -140,7 +148,7 @@ for (let i = 0; i < buttons.length; i++) {
           result != 'Infinity' &&
           !isNaN(result)
         ) {
-          // Change display to the result
+          // Change number display to the result
           changeDisplay(getElement('.number-display'), result);
           // Add equals sign to the expression to be displayed
           updateExpression(text);
@@ -149,7 +157,7 @@ for (let i = 0; i < buttons.length; i++) {
           // Update expression to result
           currentExpression = result;
           // Reset current number
-          currentNumber = '';
+          resetCurrentNumber();
         } else {
           displayError();
           resetExpression();
@@ -170,7 +178,7 @@ for (let i = 0; i < buttons.length; i++) {
           currentExpression = result;
           changeDisplay(getElement('.number-display'), currentExpression);
 
-          currentNumber = '';
+          resetCurrentNumber();
         } else if (equalPress) {
           resetExpression();
           resetAllDisplay();
@@ -189,16 +197,14 @@ for (let i = 0; i < buttons.length; i++) {
         result = evaluateExpression(currentExpression);
         changeDisplay(getElement('.expression-display'), currentExpression);
         changeDisplay(getElement('.number-display'), result);
-        currentNumber = '';
+        resetCurrentNumber();
         updateBools('operation');
 
         // Percent button ///////////////////////////////////////////////////////////////////////////////////////////
       } else if (buttons[i] === getElement('#btn-percent')) {
         // If there is a current number, calculate it as a percentage
         if (currentNumber) {
-          // console.log(typeof evaluateExpression(currentNumber));
           currentNumber = evaluateExpression(currentNumber) / 100;
-          // console.log(evaluateExpression(currentNumber));
           changeDisplay(getElement('.number-display'), currentNumber);
           // If there is NO current number, calculate current stored expression value as a percentage
         } else {
@@ -210,10 +216,6 @@ for (let i = 0; i < buttons.length; i++) {
             resetExpression();
           }
         }
-        console.log('current number:' + currentNumber + typeof currentNumber);
-        console.log(
-          'current expression:' + currentExpression + typeof currentExpression
-        );
         updateBools('percent');
 
         // Operation buttons ////////////////////////////////////////////////////////////////////////////////////////
@@ -221,12 +223,12 @@ for (let i = 0; i < buttons.length; i++) {
         updateExpression(currentNumber);
         updateExpression(text);
         changeDisplay(getElement('.expression-display'), currentExpression);
-        currentNumber = '';
+        resetCurrentNumber();
         updateBools('operation');
 
         // Number and decimal buttons ///////////////////////////////////////////////////////////////////////////////
       } else {
-        if (equalPress) {
+        if (piPress || equalPress) {
           resetExpression();
           resetAllDisplay();
           currentNumber = text;
@@ -249,43 +251,30 @@ for (let i = 0; i < buttons.length; i++) {
       displayError();
     }
     // Temporarily update expression above calcualtor
-    getElement('.test-expression').textContent = currentExpression;
-    getElement('.test-current-number').textContent = currentNumber;
-    getElement('.test-operation').textContent = operationPress;
-    getElement('.test-equal').textContent = equalPress;
-    getElement('.test-eval').textContent = evaluatedExpression;
-    getElement('.test-result').textContent = result;
-    getElement('.test-number').textContent = numberPress;
-    getElement('.test-percent').textContent = percentPress;
+    // getElement('.test-expression').textContent = currentExpression;
+    // getElement('.test-current-number').textContent = currentNumber;
+    // getElement('.test-operation').textContent = operationPress;
+    // getElement('.test-equal').textContent = equalPress;
+    // getElement('.test-eval').textContent = evaluatedExpression;
+    // getElement('.test-result').textContent = result;
+    // getElement('.test-number').textContent = numberPress;
+    // getElement('.test-percent').textContent = percentPress;
   });
 }
 
-// console.log(Math.round(eval(8) * 10000) / 10000);
-
-// let exp = '8';
-// let evaluated;
-// evaluated = exp
-//   .replaceAll('X ', '*')
-//   .replaceAll('÷', '/')
-//   .replaceAll('^', '**')
-//   .replaceAll('π', 'Math.PI');
-// console.log(Math.round(eval(evaluated) * 10000) / 10000);
-
-// let num = ;
-
-// changeDisplay(getElement('.number-display'), num);
-// console.log($('#select-theme').value);
-
+// Get theme selector elements
 let selectThemeEl = document.querySelector('#select-theme');
 let changeButtonEl = document.querySelector('#change-button');
 
-selectThemeEl.addEventListener('change', function handleChange(event) {
+// Add event listener for theme selector and change button
+selectThemeEl.addEventListener('change', function (event) {
   selectThemeEl.value = event.target.value;
   changeButtonEl.addEventListener('click', function () {
     changeCSS(`${selectThemeEl.value}.css`, 0);
   });
 });
 
+// Declare CSS file change function
 function changeCSS(cssFile, cssLinkIndex) {
   let oldlink = document.getElementsByTagName('link').item(cssLinkIndex);
   let newlink = document.createElement('link');
