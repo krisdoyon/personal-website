@@ -63,6 +63,7 @@ const resetExpression = function () {
 
 const evaluateExpression = function (expression) {
   // Replace operation characters in expression to be evaluated
+  expression = String(expression);
   evaluatedExpression = expression
     .replaceAll('X ', '*')
     .replaceAll('÷', '/')
@@ -112,7 +113,7 @@ for (let i = 0; i < buttons.length; i++) {
 
   // Button presses
   buttons[i].addEventListener('click', function () {
-    // Clear button
+    // Clear button////////////////////////////////////////////////////////////////////////////////////////////////
     try {
       if (buttons[i] === getElement('#btn-clear')) {
         resetAllDisplay();
@@ -126,7 +127,7 @@ for (let i = 0; i < buttons.length; i++) {
         updateDisplay(getElement('.number-display'), currentNumber);
         updateBools('clear');
 
-        // Equals button
+        // Equals button //////////////////////////////////////////////////////////////////////////////////////////
       } else if (buttons[i] === getElement('#btn-equals')) {
         updateExpression(currentNumber);
 
@@ -156,12 +157,19 @@ for (let i = 0; i < buttons.length; i++) {
 
         updateBools('equal');
 
-        // Pi button
+        // Pi button ////////////////////////////////////////////////////////////////////////////////////////////////
       } else if (buttons[i] === getElement('#btn-pi')) {
         if (numberPress) {
-          changeDisplay(getElement('.number-display'), currentNumber + 'π');
+          // changeDisplay(getElement('.number-display'), currentNumber + 'π');
           updateExpression(currentNumber + ' X π');
-          changeDisplay(getElement('.expression-display'), currentExpression);
+          result = evaluateExpression(currentExpression);
+          changeDisplay(
+            getElement('.expression-display'),
+            currentExpression + ' ='
+          );
+          currentExpression = result;
+          changeDisplay(getElement('.number-display'), currentExpression);
+
           currentNumber = '';
         } else if (equalPress) {
           resetExpression();
@@ -174,7 +182,7 @@ for (let i = 0; i < buttons.length; i++) {
         }
         updateBools('pi');
 
-        // Squared button
+        // Squared button ///////////////////////////////////////////////////////////////////////////////////////////
       } else if (buttons[i] === getElement('#btn-squared')) {
         updateExpression(currentNumber);
         updateExpression('^ 2');
@@ -184,19 +192,17 @@ for (let i = 0; i < buttons.length; i++) {
         currentNumber = '';
         updateBools('operation');
 
-        // Percent button
+        // Percent button ///////////////////////////////////////////////////////////////////////////////////////////
       } else if (buttons[i] === getElement('#btn-percent')) {
         // If there is a current number, calculate it as a percentage
         if (currentNumber) {
-          currentNumber = String(currentNumber.replaceAll('π', 'Math.PI'));
-          currentNumber = String(
-            Math.round((eval(currentNumber) / 100) * 10000) / 10000
-          );
+          // console.log(typeof evaluateExpression(currentNumber));
+          currentNumber = evaluateExpression(currentNumber) / 100;
+          // console.log(evaluateExpression(currentNumber));
           changeDisplay(getElement('.number-display'), currentNumber);
           // If there is NO current number, calculate current stored expression value as a percentage
         } else {
-          currentExpression =
-            Math.round((currentExpression / 100) * 10000) / 10000;
+          currentExpression = evaluateExpression(currentExpression) / 100;
           if (currentExpression) {
             changeDisplay(getElement('.number-display'), currentExpression);
           } else {
@@ -204,15 +210,21 @@ for (let i = 0; i < buttons.length; i++) {
             resetExpression();
           }
         }
+        console.log('current number:' + currentNumber + typeof currentNumber);
+        console.log(
+          'current expression:' + currentExpression + typeof currentExpression
+        );
         updateBools('percent');
-        // Operation buttons
+
+        // Operation buttons ////////////////////////////////////////////////////////////////////////////////////////
       } else if (operationsButtons.includes(buttons[i])) {
         updateExpression(currentNumber);
         updateExpression(text);
         changeDisplay(getElement('.expression-display'), currentExpression);
         currentNumber = '';
         updateBools('operation');
-        // Number and decimal buttons
+
+        // Number and decimal buttons ///////////////////////////////////////////////////////////////////////////////
       } else {
         if (equalPress) {
           resetExpression();
@@ -235,7 +247,6 @@ for (let i = 0; i < buttons.length; i++) {
     } catch (err) {
       resetExpression();
       displayError();
-      console.log(currentExpression);
     }
     // Temporarily update expression above calcualtor
     getElement('.test-expression').textContent = currentExpression;
@@ -247,4 +258,43 @@ for (let i = 0; i < buttons.length; i++) {
     getElement('.test-number').textContent = numberPress;
     getElement('.test-percent').textContent = percentPress;
   });
+}
+
+// console.log(Math.round(eval(8) * 10000) / 10000);
+
+// let exp = '8';
+// let evaluated;
+// evaluated = exp
+//   .replaceAll('X ', '*')
+//   .replaceAll('÷', '/')
+//   .replaceAll('^', '**')
+//   .replaceAll('π', 'Math.PI');
+// console.log(Math.round(eval(evaluated) * 10000) / 10000);
+
+// let num = ;
+
+// changeDisplay(getElement('.number-display'), num);
+// console.log($('#select-theme').value);
+
+let selectThemeEl = document.querySelector('#select-theme');
+let changeButtonEl = document.querySelector('#change-button');
+
+selectThemeEl.addEventListener('change', function handleChange(event) {
+  selectThemeEl.value = event.target.value;
+  changeButtonEl.addEventListener('click', function () {
+    changeCSS(`${selectThemeEl.value}.css`, 0);
+  });
+});
+
+function changeCSS(cssFile, cssLinkIndex) {
+  let oldlink = document.getElementsByTagName('link').item(cssLinkIndex);
+  let newlink = document.createElement('link');
+
+  newlink.setAttribute('rel', 'stylesheet');
+  newlink.setAttribute('href', cssFile);
+
+  document
+    .getElementsByTagName('head')
+    .item(cssLinkIndex)
+    .replaceChild(newlink, oldlink);
 }
