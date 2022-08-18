@@ -1,0 +1,70 @@
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+.calculator {
+  background-color: #444;
+  border: 0.3rem solid rgba(174, 174, 174, 0.2);
+}
+
+.number-display-box {
+  background-color: rgba(0, 0, 0, 0.955);
+  color: white;
+  border: 0.3rem solid rgba(255, 255, 255, 0.3);
+}
+
+.btn {
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 0.6rem;
+}
+
+.btn-number {
+  background-color: #000;
+}
+
+.btn-number:hover {
+  background-color: #ccc;
+  color: #000;
+}
+
+.btn-operation,
+.btn-pi {
+  color: rgb(76, 215, 233);
+}
+
+.btn-operation:hover,
+.btn-pi:hover {
+  background-color: rgb(159, 244, 255);
+  color: #000;
+}
+
+.btn-clear {
+  color: rgb(255, 147, 45);
+}
+
+.btn-clear:hover {
+  background-color: rgb(255, 171, 93);
+  color: #000;
+}
+
+#btn-equals {
+  color: rgb(211, 54, 54);
+  /* color: #f03e3e */
+}
+
+#btn-equals:hover {
+  background-color: rgba(255, 121, 121);
+}
+
+.btn-submit {
+  background-color: #000;
+}
+#change-button {
+  background-color: #bbb;
+}
+
+.theme-label {
+  color: #ddd;
+}

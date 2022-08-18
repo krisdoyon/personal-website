@@ -4,57 +4,162 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles.css" rel="stylesheet" />
+    <meta
+      name="description"
+      content="Hi, I'm Kris Doyon. I'm an aspiring software engineer from Connecticut."
+    />
+    <link rel="icon" href="img/fav-icon.png?" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/queries.css" rel="stylesheet" />
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <title>Kris Doyon</title>
   </head>
 
   <body>
-    <header>
-      <h1>Kris Doyon</h1>
-      <nav>
-        <a class="nav-link" href="about-me.html"
-          ><button class="nav-button">About Me</button></a
-        >
-        <a
-          class="nav-link"
-          href="https://www.linkedin.com/in/krisdoyon"
-          target="_blank"
-          ><button class="nav-button">LinkedIn</button></a
-        >
-        <a
-          class="nav-link"
-          href="mailto:kristopher.doyon@gmail.com"
-          target="_blank"
-          ><button class="nav-button">GMail</button></a
-        >
-        <a class="nav-link" href="https://github.com/krisdoyon" target="_blank"
-          ><button class="nav-button">GitHub</button></a
-        >
-        <a class="nav-link" href="#"
-          ><button class="nav-button">Resume</button>
+    <div class="hero-img-box">
+      <header class="header">
+        <a href="#">
+          <img class="logo" src="img/logo.png" />
         </a>
-      </nav>
-      <h2>Check out my projects below:</h2>
-      <ul class="projects">
-        <li>
-          <a class="project-link" href="wmnf/wmnf.html" target="_blank"
-            >White Mountains Website
-          </a>
-        </li>
-        <li>
-          <a
-            class="project-link"
-            href="calc/index.html"
-            target="_blank"
-            >Calculator
-          </a>
-        </li>
-        <li>
-          <a class="project-link" href="crux/index.html" target="_blank"
-            >Crux Climbing Gym
-          </a>
-        </li>
-      </ul>
-    </header>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li>
+              <a class="main-nav-link" href="#projects">Projects</a>
+            </li>
+            <li><a class="main-nav-link" href="#about">About</a></li>
+            <li>
+              <a
+                class="main-nav-link"
+                href="https://www.linkedin.com/in/krisdoyon"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                class="main-nav-link"
+                href="https://github.com/krisdoyon"
+                target="_blank"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+          <a class="btn-contact" href="mailto:kristopher.doyon@gmail.com"
+            >Contact me</a
+          >
+        </nav>
+
+        <button class="btn-mobile-nav">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+        </button>
+      </header>
+
+      <section class="section-hero">
+        <div class="text-box-hero">
+          <h1>
+            <span>
+              Hi, I'm <span class="heading-break-1"></span
+              ><strong>Kris Doyon.</strong></span
+            >
+            <span
+              >I'm an aspiring <span class="heading-break-2"></span>software
+              engineer.</span
+            >
+          </h1>
+        </div>
+      </section>
+    </div>
+
+    <section class="section-projects" id="projects">
+      <div class="container">
+        <h2 class="section-projects__title">Check out my projects:</h2>
+        <div class="grid-projects">
+          <div class="project-card">
+            <img
+              class="project-img"
+              id="calc-screenshot"
+              src="img/calc-screenshot.png"
+            />
+            <div class="project-overlay">
+              <h2 class="project-title">Javascript Calculator</h2>
+              <div class="project-links">
+                <a
+                  class="project-link"
+                  href="https://github.com/krisdoyon/personal-website/tree/main/calc"
+                  target="_blank"
+                  >View on GitHub
+                </a>
+                <a
+                  class="project-link"
+                  href="projects/calc/index.html"
+                  target="_blank"
+                  >View Live Site
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card">
+            <img
+              class="project-img"
+              id="crux-screenshot"
+              src="img/crux-screenshot.png"
+            />
+            <div class="project-overlay">
+              <h2 class="project-title">Climbing Gym Website</h2>
+              <div class="project-links">
+                <a
+                  class="project-link"
+                  href="https://github.com/krisdoyon/personal-website/tree/main/crux"
+                  target="_blank"
+                  >View on GitHub
+                </a>
+                <a
+                  class="project-link"
+                  href="projects/crux/index.html"
+                  target="_blank"
+                  >View Live Site
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-about" id="about">
+      <div class="container">
+        <div class="grid-about">
+          <div class="text-box">
+            <h2 class="section-projects__title">About me</h2>
+            <p class="about-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+              alias iure excepturi fugiat, a vel. Ab cupiditate repellendus
+              minus dolores ut non maiores nulla neque rerum. Corrupti
+              blanditiis nostrum reiciendis.
+            </p>
+          </div>
+          <div class="img-box"></div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

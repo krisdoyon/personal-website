@@ -1,0 +1,290 @@
+/* rem and em do NOT depend on html font size in media queries (62.5%) 
+1 rem = 1 em = 16px
+*/
+
+/********************************/
+/* BELOW 1344px (smaller desktops*/
+/********************************/
+
+@media (max-width: 84em) {
+  .hero-container {
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/**************************/
+/* BELOW 1200px (Landscape Tablets) */
+/**************************/
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+
+  .staff-members {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**************************/
+/* BELOW 992px (Tablets) */
+/**************************/
+
+@media (max-width: 62em) {
+  html {
+    font-size: 50%;
+  }
+  .container.stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    row-gap: 2.4rem;
+    padding: 0 12.8rem;
+  }
+
+  .stat {
+    justify-content: center;
+  }
+
+  .section-staff {
+    grid-template-columns: 1fr;
+  }
+
+  .staff-members {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .steps-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 2.4rem;
+  }
+
+  .logo-col,
+  .follow-col {
+    grid-column: span 3;
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(17, 70, 120, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide visually */
+    opacity: 0;
+    /* Make unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* Hide from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name='close-outline'] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name='menu-outline'] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+
+  .nav-cta:link,
+  .nav-cta:visited {
+    font-size: 2.8rem;
+    padding: 2.4rem 3.2rem;
+  }
+}
+
+/**************************/
+/* BELOW 832px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 52em) {
+  .cta-grid {
+    grid-template-columns: 3fr 2fr;
+  }
+
+  .cta-form {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-form {
+    margin-top: 1.2rem;
+  }
+
+  .cta-img-box {
+    background-position: top;
+  }
+}
+
+/**************************/
+/* BELOW 768px (Smaller tablets) */
+/**************************/
+
+@media (max-width: 48em) {
+  .grid-3-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .blog-post {
+    grid-column: span 2;
+  }
+
+  .grid-3-cols .blog-post:last-child {
+    grid-column: 2/4;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .container.stats-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    row-gap: 4.8rem;
+    padding: 1.2rem 0;
+  }
+}
+
+/**************************/
+/* BELOW 608px (Phones) */
+/**************************/
+
+@media (max-width: 38em) {
+  .grid {
+    row-gap: 4.8rem;
+  }
+  .grid-2-cols,
+  .grid-3-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .facility-img-box:nth-child(2) {
+    grid-row: 1;
+  }
+
+  .facility-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .facility-text-box {
+    margin-bottom: 2.4rem;
+  }
+
+  .blog-post {
+    grid-column: span 1;
+  }
+
+  .grid-3-cols .blog-post:last-child {
+    grid-column: span 1;
+  }
+
+  .staff-container {
+    padding: 9.6rem 4.8rem;
+  }
+
+  .staff-members {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .membership-plan {
+    width: 100%;
+  }
+
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-img-box {
+    height: 48rem;
+    grid-row: 1;
+    background-position: center;
+  }
+
+  .footer-logo .logo {
+    height: 3.6rem;
+  }
+
+  .social-links {
+    gap: 2rem;
+  }
+}

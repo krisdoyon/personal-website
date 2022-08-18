@@ -1,0 +1,55 @@
+body {
+  background-color: #ddd;
+}
+
+.calculator {
+  background-color: #444;
+}
+
+.number-display-box {
+  background-color: rgba(178, 201, 119, 0.955);
+}
+
+.btn {
+  color: #fff;
+  border: none;
+  border-radius: 0.6rem;
+}
+
+.btn-number {
+  background-color: rgb(119, 119, 119);
+}
+
+.btn-number:hover {
+  background-color: rgb(166, 166, 166);
+}
+
+.btn-operation,
+.btn-pi {
+  background-color: rgb(76, 215, 233);
+}
+
+.btn-operation:hover,
+.btn-pi:hover {
+  background-color: rgb(159, 244, 255);
+}
+
+.btn-clear {
+  background-color: rgb(255, 147, 45);
+}
+
+.btn-clear:hover {
+  background-color: rgb(255, 171, 93);
+}
+
+#btn-equals {
+  background-color: rgb(211, 54, 54);
+}
+
+#btn-equals:hover {
+  background-color: rgba(255, 121, 121);
+}
+
+#change-button {
+  background-color: rgb(119, 119, 119);
+}
