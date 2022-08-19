@@ -16,16 +16,19 @@ allLinks.forEach(function (link) {
     const href = link.getAttribute('href');
 
     // Scroll back to top
-    if (href === '#') e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
+    if (href === '#') {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
 
     // Scroll to section
     if (href !== '#' && href.startsWith('#')) {
       e.preventDefault();
       const sectionEl = document.querySelector(href);
+      // console.log('test');
       sectionEl.scrollIntoView({ behavior: 'smooth' });
     }
 

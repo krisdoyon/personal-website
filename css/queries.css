@@ -5,7 +5,7 @@
     font-size: 56.25%;
   }
 
-  .grid-projects {
+  .grid--projects {
     gap: 4.4rem;
   }
 }
@@ -23,8 +23,13 @@
   .hero-img-box {
     background-size: cover;
   }
-  .grid-projects {
+  .grid--projects {
     grid-template-columns: 1fr;
+    gap: 8rem;
+  }
+  .grid--about {
+    grid-template-columns: 2fr 1fr;
+    padding: 3.2rem;
   }
 }
 /* Below 848 px /////////////////////////////////////////////////////////////*/
@@ -36,13 +41,13 @@
     z-index: 9999;
   }
 
-  .logo,
+  .logo-header,
   .btn-contact {
     z-index: 999;
   }
 
   .main-nav {
-    background-color: rgba(17, 70, 120, 0.5);
+    background-color: rgba(0, 0, 0, 0.15);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     position: absolute;
@@ -106,15 +111,15 @@
     padding: 1.6rem 3.2rem;
   }
 
-  h1 {
+  .heading-primary {
     font-size: 4rem;
     gap: 1.6rem;
   }
-  h1 span {
+  .heading-primary span {
     text-align: center;
   }
 
-  .grid-about {
+  .grid--about {
     grid-template-columns: 1fr;
     gap: 3.2rem;
   }
@@ -128,7 +133,12 @@
     display: block;
   }
 
-  .hero-img-box {
+  .heading-secondary,
+  .about-text {
+    text-align: center;
+  }
+
+  body {
     background-image: url(../img/hero-img-mobile.jpg);
     background-position: bottom right;
   }
@@ -140,5 +150,9 @@
   .project-overlay {
     height: 40rem;
     width: 40rem;
+  }
+
+  .grid--about {
+    gap: 8rem;
   }
 }
