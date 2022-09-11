@@ -1,5 +1,7 @@
-### Nav
+### Border when clicking on links
 
+### ADD LIGHT THEME
 
+### PROJECT POP UPS
 
-### Cards for projects
+### WEBP IMAGE FILES

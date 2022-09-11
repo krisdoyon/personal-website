@@ -1,0 +1,22 @@
+{
+  "projects": [
+    {
+      "id": "calc",
+      "title": "Javascript Calculator",
+      "imgSrc": "img/calc-screenshot.webp",
+      "imgAlt": "calculator on simulated mobile device",
+      "gitLink": "https://github.com/krisdoyon/personal-website/tree/main/projects/calc",
+      "siteLink": "projects/calc/index.html",
+      "modalText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod porro voluptatum vel iusto, velit quasi, debitis error accusantium minus quis quibusdam assumenda eos nulla voluptas, alias ut odio officiis optio! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati omnis ullam perferendis expedita doloribus tempora, delectus consequuntur ipsam? Ab molestias culpa, autem placeat explicabo iste reiciendis quis architecto veritatis accusamus?"
+    },
+    {
+      "id": "crux",
+      "title": "Climbing Gym Website",
+      "imgSrc": "img/crux-screenshot.webp",
+      "imgAlt": "crux cimbing gym website in simulated browser",
+      "gitLink": "https://github.com/krisdoyon/personal-website/tree/main/projects/crux",
+      "siteLink": "projects/crux/index.html",
+      "modalText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod porro voluptatum vel iusto, velit quasi, debitis error accusantium minus quis quibusdam assumenda eos nulla voluptas, alias ut odio officiis optio! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati omnis ullam perferendis expedita doloribus tempora, delectus consequuntur ipsam? Ab molestias culpa, autem placeat explicabo iste reiciendis quis architecto veritatis accusamus?"
+    }
+  ]
+}

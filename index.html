@@ -21,13 +21,12 @@
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
-    <script defer src="js/script.js"></script>
     <title>Kris Doyon</title>
   </head>
 
   <body>
     <div class="hero-img-box">
-      <header class="header">
+      <header class="main-header">
         <a href="#">
           <img class="logo-header" src="img/logo.webp" alt="outlined logo" />
         </a>
@@ -55,7 +54,7 @@
             </li>
           </ul>
           <a
-            class="btn-contact"
+            class="btn btn-contact"
             href="mailto:kristopher.doyon@gmail.com"
             target="_blank"
             >Contact me</a
@@ -83,63 +82,43 @@
         </div>
       </section>
     </div>
+
     <section class="section-projects border-top-blur" id="projects">
       <div class="container container--projects">
         <h2 class="heading-secondary">Check out my recent projects</h2>
-        <div class="grid grid--projects">
-          <div class="project-card">
-            <img
-              class="project-img"
-              id="calc-screenshot"
-              src="img/calc-screenshot.webp"
-              alt="calculator on simulated mobile device"
-            />
-            <div class="project-overlay">
-              <h2 class="project-title">Javascript Calculator</h2>
-              <div class="project-links-box">
-                <a
-                  class="project-link"
-                  href="https://github.com/krisdoyon/personal-website/tree/main/calc"
-                  target="_blank"
-                  >View on GitHub
-                </a>
-                <a
-                  class="project-link"
-                  href="projects/calc/index.html"
-                  target="_blank"
-                  >View Live Site
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <img
-              class="project-img"
-              id="crux-screenshot"
-              src="img/crux-screenshot.webp"
-              alt="crux cimbing gym website in simulated browser"
-            />
-            <div class="project-overlay">
-              <h2 class="project-title">Climbing Gym Website</h2>
-              <div class="project-links-box">
-                <a
-                  class="project-link"
-                  href="https://github.com/krisdoyon/personal-website/tree/main/crux"
-                  target="_blank"
-                  >View on GitHub
-                </a>
-                <a
-                  class="project-link"
-                  href="projects/crux/index.html"
-                  target="_blank"
-                  >View Live Site
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="grid grid--projects"></div>
       </div>
     </section>
+
+    <div class="project-modal hidden">
+      <button class="close-modal">&times;</button>
+
+      <div class="modal-img-box">
+        <img class="modal-img" src="img/calc-screenshot.webp" />
+      </div>
+      <div class="modal-info-box">
+        <h2 class="modal-title">Javascript Calculator</h2>
+        <p class="modal-text">
+          I designed this simple calculator to practice basic Javascript
+          concepts. This was my first independent project using event handlers
+          and DOM manipulation. I plan to refactor the code for this project
+          after learning more about object oriented programming and classes in
+          Javascript.
+        </p>
+        <div class="project-btn-box">
+          <a class="btn modal-btn modal-git-btn" href="#testGit" target="_blank"
+            >View on GitHub
+          </a>
+          <a
+            class="btn modal-btn modal-site-btn"
+            href="#testSite"
+            target="_blank"
+            >View Live Site
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="project-modal-overlay hidden"></div>
 
     <section class="section-about section--border-top" id="about">
       <div class="container container--about">
@@ -186,5 +165,7 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+    <script defer src="js/script.js"></script>
+    <script defer src="js/projects.js"></script>
   </body>
 </html>
