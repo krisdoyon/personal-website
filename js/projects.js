@@ -18,9 +18,8 @@ const calcProject = {
   title: "Javascript Calculator",
   imgSrc: "img/calc-screenshot.webp",
   imgAlt: "calculator on simulated mobile device",
-  gitLink:
-    "https://github.com/krisdoyon/personal-website/tree/main/projects/calc",
-  siteLink: "../calc/index.html",
+  gitLink: "https://github.com/krisdoyon/calc",
+  siteLink: "https://calc.krisdoyon.com",
   modalText:
     "I designed this simple calculator to practice basic Javascript concepts. This was my first independent project using event handlers and DOM manipulation. I plan to refactor the code for this project after learning more about object oriented programming and classes in Javascript.",
 };
@@ -30,9 +29,8 @@ const cruxProject = {
   title: "Climbing Gym Website",
   imgSrc: "img/crux-screenshot.webp",
   imgAlt: "crux cimbing gym website in simulated browser",
-  gitLink:
-    "https://github.com/krisdoyon/personal-website/tree/main/projects/crux",
-  siteLink: "../crux/index.html",
+  gitLink: "https://github.com/krisdoyon/crux",
+  siteLink: "https://crux.krisdoyon.com",
   modalText:
     "This was my first project using HTML and CSS. I learned several things while working on this project including BEM conventions, using CSS helper classes, webpage performance analysis using Lighthouse, image optimization and semantic HTML/accessbility. ",
 };
