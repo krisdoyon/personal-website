@@ -44,24 +44,20 @@ allLinks.forEach(function (link) {
 
 const sectionHeroEl = document.querySelector(".section-hero");
 
-const observer = new IntersectionObserver(
-  function (entries) {
-    const ent = entries[0];
+const stickyNav = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) bodyEl.classList.add("sticky");
+  else bodyEl.classList.remove("sticky");
+};
 
-    if (ent.isIntersecting === false) {
-      document.body.classList.add("sticky");
-    }
+const navHeight = mainheaderEl.getBoundingClientRect().height;
 
-    if (ent.isIntersecting) {
-      document.body.classList.remove("sticky");
-    }
-  },
-  {
-    root: null,
-    threshold: 0,
-    rootMargin: "-80px",
-  }
-);
+const observerOptions = {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navHeight}px`,
+};
+
+const observer = new IntersectionObserver(stickyNav, observerOptions);
+
 observer.observe(sectionHeroEl);
-
-
