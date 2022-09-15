@@ -1,19 +1,17 @@
-/* 
-### TYPOGRAPHY
-
-- SPACING (px)
+/* SPACING (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
-- FONT SIZE (px)
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+FONT SIZE (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
 
-### COLORS
+:root {
+  --orange-primary: #ffc57e;
+  /* --orange-primary: #ffc164; */
+  --orange-tint: #ffdead;
 
-Primary: 
-Yellow: #ffc278;
-Blue: #5e8298;
-
- */
+  --blue-primary: #203041;
+  --blue-secondary: #5e8298;
+}
 
 * {
   margin: 0;
@@ -32,6 +30,7 @@ body {
   background-position: bottom left;
   height: 100vh;
   background-attachment: fixed;
+  color: #333;
 }
 
 /*//////////////////////////// GENERAL ////////////////////////////////*/
@@ -39,13 +38,13 @@ body {
 .container {
   max-width: 130rem;
   margin: 0 auto;
-  padding: 0 3.2rem;
+  padding: 0 7.2rem;
 }
 
 .heading-secondary {
   font-size: 4.4rem;
   font-weight: 500;
-  color: #ffc278;
+  color: var(--orange-primary);
   margin-bottom: 6rem;
 }
 
@@ -128,13 +127,12 @@ body {
 .btn-contact:link,
 .btn-contact:visited {
   padding: 1rem 2.2rem;
-  background-color: transparent;
+  background-color: var(--orange-primary);
 
-  border: 2px solid #ffc278;
-  border-radius: 1.2rem;
+  border-radius: 100rem;
 
   font-size: 1.4rem;
-  color: #fff;
+  color: #222;
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
@@ -149,8 +147,7 @@ body {
 
 .btn-contact:hover,
 .btn-contact:active {
-  background-color: #ffc278;
-  color: #000;
+  background-color: var(--orange-tint);
 }
 
 /*//////////////////////////// NAVIGATION ////////////////////////////////*/
@@ -174,7 +171,7 @@ body {
 }
 
 .main-nav-link:hover {
-  color: #ffc278;
+  color: var(--orange-primary);
 }
 
 .main-nav-link::before {
@@ -185,7 +182,7 @@ body {
   height: 0.1rem;
   bottom: -0.4rem;
   left: 0;
-  background-color: #ffc278;
+  background-color: var(--orange-primary);
   transform: scaleX(0);
   transition: transform 0.3s ease;
 }
@@ -223,7 +220,7 @@ body {
   height: 8rem;
   padding-top: 0;
   padding-bottom: 0;
-  background-color: #203041;
+  background-color: var(--blue-primary);
 }
 
 .sticky .section-hero {
@@ -260,7 +257,7 @@ h1 span {
 }
 
 h1 strong {
-  color: #ffc278;
+  color: var(--orange-primary);
 }
 
 .heading-break-1,
@@ -272,7 +269,7 @@ h1 strong {
 
 .section-projects {
   padding: 12.8rem 0;
-  background-image: linear-gradient(transparent, #203041);
+  background-image: linear-gradient(transparent, var(--blue-primary));
   backdrop-filter: blur(3px);
   position: relative;
 }
@@ -280,7 +277,8 @@ h1 strong {
 .grid--projects {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+  grid-template-rows: repeat(2, 1fr);
+  /* width: 100%; */
   gap: 6rem;
 }
 
@@ -288,8 +286,10 @@ h1 strong {
 
 .project-card,
 .project-overlay {
-  height: 44rem;
-  width: 54rem;
+  /* height: 44rem; */
+  /* width: 54rem; */
+  width: 100%;
+  aspect-ratio: 6/5;
 }
 
 .project-card {
@@ -301,6 +301,7 @@ h1 strong {
   justify-self: center;
   align-items: center;
   border-radius: 1.6rem;
+  position: relative;
 }
 
 .project-card:hover {
@@ -342,15 +343,18 @@ h1 strong {
 }
 
 .project-overlay span {
-  color: #ffc278;
+  color: var(--orange-primary);
   font-size: 1.6rem;
   font-weight: 700;
   text-align: center;
   transition: all 0.2s;
+  align-self: center;
+  width: fit-content;
+  padding: 1.2rem;
 }
 
 .project-overlay span:hover {
-  color: #fff;
+  color: var(--orange-tint);
 }
 
 .project-img {
@@ -378,7 +382,7 @@ h1 strong {
 }
 
 .project-btn:hover {
-  background-color: #ffc278;
+  background-color: var(--orange-primary);
   box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.25);
 }
 
@@ -387,7 +391,7 @@ h1 strong {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 60%;
   height: 80%;
 
   background-color: #f7f7f7;
@@ -430,12 +434,12 @@ h1 strong {
 }
 
 .close-modal:hover {
-  color: #ffc278;
+  color: var(--orange-primary);
 }
 
 .modal-title {
   color: #333;
-  font-size: 2.4rem;
+  font-size: 3rem;
 }
 
 .modal-text {
@@ -452,11 +456,12 @@ h1 strong {
 }
 
 .modal-img-box {
-  height: 60%;
+  height: 50%;
   background-color: #e7e7e7;
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 4.8rem;
 }
 
@@ -464,26 +469,26 @@ h1 strong {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 40%;
+  height: 50%;
   padding: 2.4rem 3.6rem 3.6rem 3.6rem;
-  gap: 1.2rem;
+  gap: 2.4rem;
 }
 
 .modal-btn {
   font-size: 1.4rem;
   color: #fff;
   font-weight: 700;
-  background-color: #203041;
+  background-color: var(--blue-primary);
 }
 
 .modal-btn:hover {
-  background-color: #5e8298;
+  background-color: var(--blue-secondary);
 }
 
 /* ABOUT ME SECTION /////////////////////////////////////////////////////*/
 
 .section-about {
-  background-color: #203041;
+  background-color: var(--blue-primary);
   padding: 12rem 0 16rem;
   position: relative;
 }
@@ -503,14 +508,32 @@ h1 strong {
   align-self: center;
   justify-self: center;
   padding: 12.5rem;
-  background-color: #ffc278;
+  background-color: var(--orange-primary);
   border-radius: 1000rem;
+}
+
+.coming-soon {
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.coming-soon:before {
+  content: "Coming Soon!";
+  position: absolute;
+  transform: rotate(-40deg);
+  background-color: var(--orange-primary);
+  width: 150%;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 2.4rem;
 }
 
 /* FOOTER /////////////////////////////////////////////////////////////////////*/
 
 footer {
-  background-color: #203041;
+  background-color: var(--blue-primary);
   position: relative;
   padding: 6.4rem 0;
   display: flex;
@@ -542,7 +565,7 @@ footer {
 }
 
 .icon-footer:hover {
-  color: #ffc278;
+  color: var(--orange-primary);
   height: 3rem;
   width: 3rem;
 }

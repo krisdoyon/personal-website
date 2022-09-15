@@ -8,15 +8,15 @@
   .grid--projects {
     gap: 4.4rem;
   }
+
+  .project-modal {
+    width: 70%;
+  }
 }
 
 /* BELOW 1088 px //////////////////////////////////////////////////////////*/
 
 @media (max-width: 68em) {
-  html {
-    font-size: 50%;
-  }
-
   h1 {
     font-size: 4.4rem;
   }
@@ -115,6 +115,11 @@
     text-align: center;
   }
 
+  .modal-img-box,
+  .modal-info-box {
+    height: 50%;
+  }
+
   .grid--about {
     grid-template-columns: 1fr;
     gap: 3.2rem;
@@ -127,6 +132,10 @@
   .heading-break-1,
   .heading-break-2 {
     display: block;
+  }
+
+  .container {
+    padding: 0 4.8rem;
   }
 
   .heading-secondary,
@@ -143,13 +152,42 @@
   .section-hero {
     padding: 4.8rem 0;
   }
-  .project-card,
-  .project-overlay {
-    height: 40rem;
-    width: 40rem;
-  }
 
   .grid--about {
     gap: 8rem;
+  }
+
+  .project-modal {
+    width: 80%;
+    height: 90%;
+  }
+
+  .modal-img-box {
+    padding: 6.4rem 3rem;
+    /* aspect-ratio: 889/500; */
+  }
+  .modal-info-box {
+    text-align: center;
+    padding: 3.6rem 2.4rem;
+  }
+  .modal-img {
+    height: fit-content;
+    width: fit-content;
+  }
+}
+
+/* Below 450px /////////////////////////////////////////////////////////////////*/
+
+@media (max-width: 28em) {
+  html {
+    font-size: 50%;
+  }
+
+  .modal-img-box {
+    height: 45%;
+  }
+
+  .modal-info-box {
+    height: 55%;
   }
 }
