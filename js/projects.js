@@ -13,11 +13,23 @@ const modalImg = document.querySelector(".modal-img");
 
 // Display projects
 
+const triviaProject = {
+  id: "trivia",
+  title: "Trivia Game",
+  imgSrc: "img/trivia-screenshot.webp",
+  gitLink: "https://github.com/krisdoyon/trivia",
+  siteLink: "https://trivia.krisdoyon.com",
+  modalText:
+    "This was my first project using an API. I used XMLHttpRequest to request trivia data from The Trivia API (https://the-trivia-api.com). I also practiced using array methods, event bubbling, using timers and randomizing data.",
+};
+
 const calcProject = {
   id: "calc",
   title: "Javascript Calculator",
   imgSrc: "img/calc-screenshot.webp",
   imgAlt: "calculator on simulated mobile device",
+  imgOrientation: "vertical",
+
   gitLink: "https://github.com/krisdoyon/calc",
   siteLink: "https://calc.krisdoyon.com",
   modalText:
@@ -29,13 +41,14 @@ const cruxProject = {
   title: "Climbing Gym Website",
   imgSrc: "img/crux-screenshot.webp",
   imgAlt: "crux cimbing gym website in simulated browser",
+  imgOrientation: "horizontal",
   gitLink: "https://github.com/krisdoyon/crux",
   siteLink: "https://crux.krisdoyon.com",
   modalText:
     "This was my first project using HTML and CSS. I learned several things while working on this project including BEM conventions, using CSS helper classes, webpage performance analysis using Lighthouse, image optimization and semantic HTML/accessbility. ",
 };
 
-const mainProjects = [cruxProject, calcProject];
+const mainProjects = [cruxProject, triviaProject, calcProject];
 
 // Display projects
 const displayProjects = function (projects) {
@@ -45,6 +58,9 @@ const displayProjects = function (projects) {
               class="project-img"
               src="${project.imgSrc}"
               alt="${project.imgAlt}"
+              style="aspect-ratio:${
+                project.imgOrientation === "vertical" ? 0.75 : 1.9
+              }"
             />
             <div class="project-overlay">
               <h2 class="project-title">${project.title}</h2>
