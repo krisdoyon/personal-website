@@ -11,6 +11,8 @@ FONT SIZE (px)
 
   --blue-primary: #203041;
   --blue-secondary: #5e8298;
+
+  --border-radius-sm: 1;
 }
 
 * {
@@ -300,8 +302,9 @@ h1 strong {
   background-color: #ddd;
   justify-self: center;
   align-items: center;
-  border-radius: 1.6rem;
+  border-radius: 1.2rem;
   position: relative;
+  box-shadow: 0 2rem 3.2rem rgba(0, 0, 0, 0.25);
 }
 
 .project-card:hover {
@@ -339,7 +342,7 @@ h1 strong {
   flex-direction: column;
   justify-content: space-between;
 
-  border-radius: 1.6rem;
+  border-radius: 1.2rem;
 }
 
 .project-overlay span {
@@ -396,13 +399,13 @@ h1 strong {
 
   background-color: #f7f7f7;
   /* padding: 4rem; */
-  border-radius: 0.8rem;
+  border-radius: 1.2rem;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 9999;
 
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow: auto;
 }
 
 .project-modal-overlay {
@@ -458,6 +461,7 @@ h1 strong {
 .modal-img-box {
   height: 50%;
   background-color: #e7e7e7;
+  border-radius: 1.2rem;
   width: 100%;
   display: flex;
   justify-content: center;
