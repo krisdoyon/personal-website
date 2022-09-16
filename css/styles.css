@@ -80,6 +80,15 @@ body {
   visibility: hidden;
 }
 
+.section {
+  transition: all 0.5s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -288,8 +297,6 @@ h1 strong {
 
 .project-card,
 .project-overlay {
-  /* height: 44rem; */
-  /* width: 54rem; */
   width: 100%;
   aspect-ratio: 6/5;
 }

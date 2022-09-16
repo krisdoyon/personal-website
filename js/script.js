@@ -1,6 +1,7 @@
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const mainheaderEl = document.querySelector(".main-header");
 const bodyEl = document.querySelector("body");
+const allSections = document.querySelectorAll(".section");
 
 btnNavEl.addEventListener("click", function () {
   mainheaderEl.classList.toggle("nav-open");
@@ -61,3 +62,23 @@ const observerOptions = {
 const observer = new IntersectionObserver(stickyNav, observerOptions);
 
 observer.observe(sectionHeroEl);
+
+/////////////////////////////////////////////////////////
+// REVEAL SECTIONS ON SCROLL
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section--hidden");
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+
+allSections.forEach(function (section) {
+  section.classList.add("section--hidden");
+  sectionObserver.observe(section);
+});
