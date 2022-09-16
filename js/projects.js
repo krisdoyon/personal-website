@@ -6,81 +6,104 @@ const projModalOverlayEl = document.querySelector(".project-modal-overlay");
 const btnCloseModal = document.querySelector(".close-modal");
 
 const modalTitle = document.querySelector(".modal-title");
-const modalText = document.querySelector(".modal-text");
+const modalTextLabel = document.querySelector(".modal-text");
 const modalGitBtn = document.querySelector(".modal-git-btn");
 const modalSiteBtn = document.querySelector(".modal-site-btn");
 const modalImg = document.querySelector(".modal-img");
 
 // Display projects
 
-const triviaProject = {
-  id: "trivia",
-  title: "Trivia Game",
-  imgSrc: "img/trivia-screenshot.webp",
-  gitLink: "https://github.com/krisdoyon/trivia",
-  siteLink: "https://trivia.krisdoyon.com",
-  modalText:
-    "This was my first project using an API. I used XMLHttpRequest to request trivia data from The Trivia API (https://the-trivia-api.com). I also practiced using array methods, event bubbling, using timers and randomizing data.",
-};
-
-const calcProject = {
-  id: "calc",
-  title: "Javascript Calculator",
-  imgSrc: "img/calc-screenshot.webp",
-  imgAlt: "calculator on simulated mobile device",
-  imgOrientation: "vertical",
-
-  gitLink: "https://github.com/krisdoyon/calc",
-  siteLink: "https://calc.krisdoyon.com",
-  modalText:
-    "I designed this simple calculator to practice basic Javascript concepts. This was my first independent project using event handlers and DOM manipulation. I plan to refactor the code for this project after learning more about object oriented programming and classes in Javascript.",
-};
-
-const cruxProject = {
-  id: "crux",
-  title: "Climbing Gym Website",
-  imgSrc: "img/crux-screenshot.webp",
-  imgAlt: "crux cimbing gym website in simulated browser",
-  imgOrientation: "horizontal",
-  gitLink: "https://github.com/krisdoyon/crux",
-  siteLink: "https://crux.krisdoyon.com",
-  modalText:
-    "This was my first project using HTML and CSS. I learned several things while working on this project including BEM conventions, using CSS helper classes, webpage performance analysis using Lighthouse, image optimization and semantic HTML/accessbility. ",
-};
-
-const mainProjects = [cruxProject, triviaProject, calcProject];
-
-// Display projects
-const displayProjects = function (projects) {
-  projects.forEach((project) => {
-    project.projectCardHTML = `<div class="project-card" id="${project.id}">
+class Project {
+  constructor(
+    id,
+    title,
+    imgSrc,
+    imgAlt,
+    imgOrientation,
+    gitLink,
+    siteLink,
+    modalText
+  ) {
+    this.id = id;
+    this.title = title;
+    this.imgSrc = imgSrc;
+    this.imgAlt = imgAlt;
+    this.imgOrientation = imgOrientation;
+    this.gitLink = gitLink;
+    this.siteLink = siteLink;
+    this.modalText = modalText;
+    this.projectCardHTML = `<div class="project-card" id="${this.id}">
             <img
               class="project-img"
-              src="${project.imgSrc}"
-              alt="${project.imgAlt}"
+              src="${this.imgSrc}"
+              alt="${this.imgAlt}"
               style="aspect-ratio:${
-                project.imgOrientation === "vertical" ? 0.75 : 1.9
+                this.imgOrientation === "vertical" ? 0.75 : 1.9
               }"
             />
             <div class="project-overlay">
-              <h2 class="project-title">${project.title}</h2>
+              <h2 class="project-title">${this.title}</h2>
               <span>MORE INFO</span>
               <div class="project-btn-box">
                 <a
                   class="project-btn"
-                  href="${project.gitLink}"
+                  href="${this.gitLink}"
                   target="_blank"
                   >View on GitHub
                 </a>
                 <a
                   class="project-btn"
-                  href="${project.siteLink}"
+                  href="${this.siteLink}"
                   target="_blank"
                   >View Live Site
                 </a>
               </div>
             </div>
           </div>`;
+  }
+}
+
+const triviaProject = new Project(
+  (this.id = "trivia"),
+  (this.title = "Trivia Game"),
+  (this.imgSrc = "img/trivia-screenshot.webp"),
+  (this.imgAlt = "trivia game website in simulated browser"),
+  (this.imgOrientation = "horizontal"),
+  (this.gitLink = "https://github.com/krisdoyon/trivia"),
+  (this.siteLink = "https://trivia.krisdoyon.com"),
+  (this.modalText =
+    "This was my first project using an API. I used XMLHttpRequest to request trivia data from The Trivia API (https://the-trivia-api.com). I also practiced using array methods, event bubbling, using timers and randomizing data.")
+);
+
+const calcProject = new Project(
+  (this.id = "calc"),
+  (this.title = "Javascript Calculator"),
+  (this.imgSrc = "img/calc-screenshot.webp"),
+  (this.imgAlt = "calculator on simulated mobile device"),
+  (this.imgOrientation = "vertical"),
+  (this.gitLink = "https://github.com/krisdoyon/calc"),
+  (this.siteLink = "https://calc.krisdoyon.com"),
+  (this.modalText =
+    "I designed this simple calculator to practice basic Javascript concepts. This was my first independent project using event handlers and DOM manipulation. I plan to refactor the code for this project after learning more about object oriented programming and classes in Javascript.")
+);
+
+const cruxProject = new Project(
+  (this.id = "crux"),
+  (this.title = "Climbing Gym Website"),
+  (this.imgSrc = "img/crux-screenshot.webp"),
+  (this.imgAlt = "crux cimbing gym website in simulated browser"),
+  (this.imgOrientation = "horizontal"),
+  (this.gitLink = "https://github.com/krisdoyon/crux"),
+  (this.siteLink = "https://crux.krisdoyon.com"),
+  (this.modalText =
+    "This was my first project using HTML and CSS. I learned several things while working on this project including BEM conventions, using CSS helper classes, webpage performance analysis using Lighthouse, image optimization and semantic HTML/accessbility. ")
+);
+
+const mainProjects = [cruxProject, triviaProject, calcProject];
+
+// Display projects
+const displayProjects = function (projects) {
+  projects.forEach((project) => {
     projectGridEl.insertAdjacentHTML("afterbegin", project.projectCardHTML);
   });
 };
@@ -93,7 +116,7 @@ const projectCards = Array.from(document.querySelectorAll(".project-card"));
 
 const updateModal = function (project) {
   modalTitle.textContent = project.title;
-  modalText.textContent = project.modalText;
+  modalTextLabel.textContent = project.modalText;
   modalImg.src = project.imgSrc;
   modalGitBtn.href = project.gitLink;
   modalSiteBtn.href = project.siteLink;
