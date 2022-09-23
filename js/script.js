@@ -1,10 +1,10 @@
 const btnNavEl = document.querySelector(".btn-mobile-nav");
-const mainheaderEl = document.querySelector(".main-header");
+const mainHeaderEl = document.querySelector(".main-header");
 const bodyEl = document.querySelector("body");
 const allSections = document.querySelectorAll(".section");
 
 btnNavEl.addEventListener("click", function () {
-  mainheaderEl.classList.toggle("nav-open");
+  mainHeaderEl.classList.toggle("nav-open");
   bodyEl.classList.toggle("overflow-hidden");
 });
 
@@ -36,7 +36,7 @@ allLinks.forEach(function (link) {
 
     // Close mobile navigation
     if (link.classList.contains("main-nav-link")) {
-      headerEl.classList.toggle("nav-open");
+      mainHeaderEl.classList.toggle("nav-open");
     }
   });
 });
@@ -51,7 +51,7 @@ const stickyNav = function (entries) {
   else bodyEl.classList.remove("sticky");
 };
 
-const navHeight = mainheaderEl.getBoundingClientRect().height;
+const navHeight = mainHeaderEl.getBoundingClientRect().height;
 
 const observerOptions = {
   root: null,
