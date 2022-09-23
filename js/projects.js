@@ -14,23 +14,14 @@ const modalImg = document.querySelector(".modal-img");
 // Display projects
 
 class Project {
-  constructor(
-    id,
-    title,
-    imgSrc,
-    imgAlt,
-    imgOrientation,
-    gitLink,
-    siteLink,
-    modalText
-  ) {
+  constructor(id, title, imgAlt, imgOrientation, modalText) {
     this.id = id;
     this.title = title;
-    this.imgSrc = imgSrc;
+    this.imgSrc = `img/${this.id}-screenshot.webp`;
     this.imgAlt = imgAlt;
     this.imgOrientation = imgOrientation;
-    this.gitLink = gitLink;
-    this.siteLink = siteLink;
+    this.gitLink = `https://github.com/krisdoyon/${this.id}`;
+    this.siteLink = `https://${this.id.replaceAll("-", "")}.krisdoyon.com`;
     this.modalText = modalText;
     this.projectCardHTML = `<div class="project-card" id="${this.id}">
             <img
@@ -63,43 +54,48 @@ class Project {
   }
 }
 
+const peakTrackerProject = new Project(
+  (this.id = "peak-tracker"),
+  (this.title = "Peak Tracker"),
+  (this.imgAlt = "peak tracker website in simulated browser"),
+  (this.imgOrientation = "horizontal"),
+  (this.modalText =
+    "Peak Tracker is a web app designed to track progress of mountain summit peakbagging lists. The Leaflet library was used to implement map functionality. I primarily practiced object oriented programming concepts while working on this project.")
+);
+
 const triviaProject = new Project(
   (this.id = "trivia"),
   (this.title = "Trivia Game"),
-  (this.imgSrc = "img/trivia-screenshot.webp"),
   (this.imgAlt = "trivia game website in simulated browser"),
-  (this.imgOrientation = "horizontal"),
-  (this.gitLink = "https://github.com/krisdoyon/trivia"),
-  (this.siteLink = "https://trivia.krisdoyon.com"),
+  (this.imgOrientation = "vertical"),
   (this.modalText =
-    "This was my first project using an API. I used XMLHttpRequest to request trivia data from The Trivia API (https://the-trivia-api.com). I also practiced using array methods, event bubbling, using timers and randomizing data.")
+    "A simple trivia game using data from The Trivia API (https://the-trivia-api.com). XMLHttpRequest was used to request data. In this project I practiced using array methods, event bubbling, using timers and randomizing data.")
 );
 
 const calcProject = new Project(
   (this.id = "calc"),
-  (this.title = "Javascript Calculator"),
-  (this.imgSrc = "img/calc-screenshot.webp"),
+  (this.title = "Calculator"),
   (this.imgAlt = "calculator on simulated mobile device"),
   (this.imgOrientation = "vertical"),
-  (this.gitLink = "https://github.com/krisdoyon/calc"),
-  (this.siteLink = "https://calc.krisdoyon.com"),
   (this.modalText =
-    "I designed this simple calculator to practice basic Javascript concepts. This was my first independent project using event handlers and DOM manipulation. I plan to refactor the code for this project after learning more about object oriented programming and classes in Javascript.")
+    "I designed this simple calculator to practice basic Javascript concepts. This was my first independent project using event handlers and DOM manipulation. I plan to refactor the code for this project using objects and classes in the future.")
 );
 
 const cruxProject = new Project(
   (this.id = "crux"),
   (this.title = "Climbing Gym Website"),
-  (this.imgSrc = "img/crux-screenshot.webp"),
   (this.imgAlt = "crux cimbing gym website in simulated browser"),
   (this.imgOrientation = "horizontal"),
-  (this.gitLink = "https://github.com/krisdoyon/crux"),
-  (this.siteLink = "https://crux.krisdoyon.com"),
   (this.modalText =
-    "This was my first project using HTML and CSS. I learned several things while working on this project including BEM conventions, using CSS helper classes, webpage performance analysis using Lighthouse, image optimization and semantic HTML/accessbility. ")
+    "This was my first web project using HTML and CSS. I learned/practied BEM conventions, using CSS helper classes, webpage performance analysis using Lighthouse, image optimization and semantic HTML/accessbility.")
 );
 
-const mainProjects = [cruxProject, triviaProject, calcProject];
+const mainProjects = [
+  cruxProject,
+  calcProject,
+  triviaProject,
+  peakTrackerProject,
+];
 
 // Display projects
 const displayProjects = function (projects) {
