@@ -60,7 +60,7 @@ const peakTrackerProject = new Project(
   (this.imgAlt = "peak tracker website in simulated browser"),
   (this.imgOrientation = "horizontal"),
   (this.modalText =
-    "Peak Tracker is a web app designed to track progress of mountain summit peakbagging lists. The Leaflet library was used to implement map functionality. I primarily practiced object oriented programming concepts while working on this project.")
+    "Peak Tracker is a web app designed to track user progress of mountain summit peakbagging lists. I used the Leaflet library to implement map functionality and a simple NodeJS script to extract relevant mountain summit data from text files downloaded from the USGS Geographic Names Information System. I wrote the code for this project using a class based structure in order to practice object oriented programming concepts.")
 );
 
 const triviaProject = new Project(
@@ -69,7 +69,7 @@ const triviaProject = new Project(
   (this.imgAlt = "trivia game website in simulated browser"),
   (this.imgOrientation = "vertical"),
   (this.modalText =
-    "A simple trivia game using data from The Trivia API (https://the-trivia-api.com). XMLHttpRequest was used to request data. In this project I practiced using array methods, event bubbling, using timers and randomizing data.")
+    "A simple trivia game using data from The Trivia API (https://the-trivia-api.com). XMLHttpRequest was used to fetch data from the API. In this project I practiced using array methods, event bubbling, using timers and randomizing data.")
 );
 
 const calcProject = new Project(
@@ -78,7 +78,7 @@ const calcProject = new Project(
   (this.imgAlt = "calculator on simulated mobile device"),
   (this.imgOrientation = "vertical"),
   (this.modalText =
-    "I designed this simple calculator to practice basic Javascript concepts. This was my first independent project using event handlers and DOM manipulation. I plan to refactor the code for this project using objects and classes in the future.")
+    "I designed this simple calculator to practice basic Javascript concepts. This was my first independent project using event handlers and DOM manipulation.")
 );
 
 const cruxProject = new Project(
@@ -87,7 +87,7 @@ const cruxProject = new Project(
   (this.imgAlt = "crux cimbing gym website in simulated browser"),
   (this.imgOrientation = "horizontal"),
   (this.modalText =
-    "This was my first web project using HTML and CSS. I learned/practied BEM conventions, using CSS helper classes, webpage performance analysis using Lighthouse, image optimization and semantic HTML/accessbility.")
+    "This was my first web project using HTML and CSS. I learned/practied BEM conventions, using CSS helper classes, webpage performance analysis using Lighthouse, image optimization, semantic HTML and best practices for accessbility.")
 );
 
 const weatherProject = new Project(
@@ -96,7 +96,7 @@ const weatherProject = new Project(
   (this.imgAlt = "weather app in simulated browser"),
   (this.imgOrientation = "horizontal"),
   (this.modalText =
-    "A simple weather app to practice using APIs. I used the OpenStreetMap Nominatim API to search locations, the OpenWeather and OpenMeteo APIs for weather data, and the lunarphase-js module on npm for the current moon phase. The geolocation API was used to automatically get weather data using the user's location. I used Parcel for bundling the application.")
+    "A simple weather app to practice using APIs. I used the OpenStreetMap Nominatim API to implement location search functionality, the OpenWeather and OpenMeteo APIs to fetch weather data, and the lunarphase-js npm module to get the current moon phase. I used the geolocation API to automatically get weather data using the user's location, and Parcel for bundling the application.")
 );
 
 const forkifyProject = new Project(
@@ -105,7 +105,7 @@ const forkifyProject = new Project(
   (this.imgAlt = "forkify app in simulated browser"),
   (this.imgOrientation = "horizontal"),
   (this.modalText =
-    "A simple recipe application created through Jonas Schmedmann's Javascript course on Udemy. Features include searching recipes by keywords, adjusting servings, bookmarking recipes and adding personalized recipes. Recipe data comes from the Forkify v2 API and Parcel was used to bundle the application.")
+    "A simple recipe application created through Jonas Schmedmann's Javascript course on Udemy. This project was built using the Module-View-Controller architecture. Features include searching recipes by keywords, adjusting ingredient amounts based on servings, bookmarking recipes and adding personalized recipes. Recipe data comes from the Forkify v2 API and Parcel was used to bundle the application.")
 );
 
 const mainProjects = [
@@ -113,8 +113,8 @@ const mainProjects = [
   calcProject,
   triviaProject,
   weatherProject,
-  peakTrackerProject,
   forkifyProject,
+  peakTrackerProject,
 ];
 
 // Display projects
