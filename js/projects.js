@@ -90,11 +90,31 @@ const cruxProject = new Project(
     "This was my first web project using HTML and CSS. I learned/practied BEM conventions, using CSS helper classes, webpage performance analysis using Lighthouse, image optimization and semantic HTML/accessbility.")
 );
 
+const weatherProject = new Project(
+  (this.id = "weather"),
+  (this.title = "Weather App"),
+  (this.imgAlt = "weather app in simulated browser"),
+  (this.imgOrientation = "horizontal"),
+  (this.modalText =
+    "A simple weather app to practice using APIs. I used the OpenStreetMap Nominatim API to search locations, the OpenWeather and OpenMeteo APIs for weather data, and the lunarphase-js module on npm for the current moon phase. The geolocation API was used to automatically get weather data using the user's location. I used Parcel for bundling the application.")
+);
+
+const forkifyProject = new Project(
+  (this.id = "forkify"),
+  (this.title = "Forkify"),
+  (this.imgAlt = "forkify app in simulated browser"),
+  (this.imgOrientation = "horizontal"),
+  (this.modalText =
+    "A simple recipe application created through Jonas Schmedmann's Javascript course on Udemy. Features include searching recipes by keywords, adjusting servings, bookmarking recipes and adding personalized recipes. Recipe data comes from the Forkify v2 API and Parcel was used to bundle the application.")
+);
+
 const mainProjects = [
   cruxProject,
   calcProject,
   triviaProject,
+  weatherProject,
   peakTrackerProject,
+  forkifyProject,
 ];
 
 // Display projects
