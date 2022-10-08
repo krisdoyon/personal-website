@@ -506,13 +506,14 @@ h1 strong {
 
 .grid--about {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 3fr 1fr;
   align-items: center;
+  gap: 6.4rem;
 }
 
 .about-text {
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 
 .about-img-box {
@@ -521,6 +522,15 @@ h1 strong {
   padding: 12.5rem;
   background-color: var(--orange-primary);
   border-radius: 1000rem;
+}
+
+.about-img {
+  background-color: var(--orange-primary);
+  padding: 1.2rem;
+  border-radius: 1000rem;
+  height: 28rem;
+  align-self: center;
+  justify-self: center;
 }
 
 .coming-soon {
