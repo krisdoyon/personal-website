@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as *;
+
+////////////////////////////////////////////////////////////////////
+// GLOBAL RESETS
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(1200) {
+    font-size: 59.375%;
+  }
+
+  @include respond(1000) {
+    font-size: 50%;
+  }
+}
+
+body {
+  box-sizing: border-box;
+}

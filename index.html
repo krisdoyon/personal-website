@@ -6,159 +6,163 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Hi, I'm Kris Doyon. I'm an aspiring software engineer from Connecticut."
+      content="Hi, I'm Kris Doyon. I'm a software developer from Connecticut."
     />
-    <link rel="icon" href="img/fav-icon.png?" />
+    <link rel="shortcut icon" href="./img/fav-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/queries.css" rel="stylesheet" />
+    <link href="./css/styles.css" rel="stylesheet" />
     <script
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
-    <script defer src="js/script.js"></script>
-    <script defer src="js/projects.js"></script>
+    <script defer src="./js/script.js"></script>
+    <script defer src="./js/projects.js"></script>
+    <script defer src="./js/mobile-nav.js"></script>
 
     <title>Kris Doyon</title>
   </head>
 
   <body>
-    <div class="hero-img-box">
-      <header class="main-header">
-        <a href="#">
-          <img class="logo-header" src="img/logo.webp" alt="outlined logo" />
-        </a>
-        <nav class="main-nav">
-          <ul class="main-nav-list">
-            <li>
-              <a class="main-nav-link" href="#projects">Projects</a>
-            </li>
-            <li><a class="main-nav-link" href="#about">About</a></li>
-            <li>
-              <a
-                class="main-nav-link"
-                href="https://www.linkedin.com/in/krisdoyon"
-                target="_blank"
-                >LinkedIn</a
-              >
-            </li>
-            <li>
-              <a
-                class="main-nav-link"
-                href="https://github.com/krisdoyon"
-                target="_blank"
-                >GitHub</a
-              >
-            </li>
-          </ul>
-          <a
-            class="btn btn-contact"
-            href="mailto:kristopher.doyon@gmail.com"
-            target="_blank"
-            >Contact me</a
-          >
-        </nav>
-
-        <button class="btn-mobile-nav">
-          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
-          <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
-        </button>
-      </header>
-
-      <section class="section-hero">
-        <div class="text-box-hero">
-          <h1 class="heading-primary">
-            <span>
-              Hi, I'm <span class="heading-break-1"></span
-              ><strong>Kris Doyon.</strong></span
+    <header class="header">
+      <a href="#" class="">
+        <img class="header__logo" src="./img/logo.webp" alt="outlined logo" />
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li>
+            <a class="main-nav__link" href="#projects">Projects</a>
+          </li>
+          <li><a class="main-nav__link" href="#about">About</a></li>
+          <li>
+            <a
+              class="main-nav__link"
+              href="https://www.linkedin.com/in/krisdoyon"
+              target="_blank"
+              >LinkedIn</a
             >
-            <span
-              >I'm an aspiring <span class="heading-break-2"></span>software
-              developer.</span
+          </li>
+          <li>
+            <a
+              class="main-nav__link"
+              href="https://github.com/krisdoyon"
+              target="_blank"
+              >GitHub</a
             >
-          </h1>
-        </div>
-      </section>
-    </div>
+          </li>
+        </ul>
+        <a
+          class="btn btn--orange header__btn-contact"
+          href="mailto:kristopher.doyon@gmail.com"
+          target="_blank"
+          >Contact me</a
+        >
+      </nav>
 
-    <section class="section section-projects border-top-blur" id="projects">
-      <div class="container container--projects">
+      <button class="main-nav__btn-mobile">
+        <div class="main-nav__btn-mobile-bar"></div>
+        <div class="main-nav__btn-mobile-bar"></div>
+        <div class="main-nav__btn-mobile-bar"></div>
+      </button>
+    </header>
+
+    <section class="section-hero">
+      <h1 class="heading-primary">
+        <span>
+          Hi, I'm <br class="heading-primary__br-1" /><strong
+            >Kris Doyon.</strong
+          ></span
+        >
+        <span
+          >I'm an aspiring <br class="heading-primary__br-2" />software
+          developer.</span
+        >
+      </h1>
+    </section>
+
+    <section class="section section-projects" id="projects">
+      <div class="container">
         <h2 class="heading-secondary">Check out my recent projects</h2>
-        <div class="grid grid--projects">
-          <!-- <div class="project-card coming-soon"></div> -->
+        <div class="projects-grid">
+          <!-- <div class="project coming-soon"></div> -->
         </div>
       </div>
     </section>
 
-    <div class="project-modal hidden">
-      <button class="close-modal">&times;</button>
+    <div class="modal hidden">
+      <button class="modal__close-btn">&times;</button>
 
-      <div class="modal-img-box">
-        <img class="modal-img" src="#" />
+      <div class="modal__img-box">
+        <img class="modal__img" src="#" />
       </div>
-      <div class="modal-info-box">
-        <h2 class="modal-title"></h2>
-        <p class="modal-text"></p>
-        <div class="project-btn-box">
-          <a class="btn modal-btn modal-git-btn" href="#" target="_blank"
+      <div class="modal__info-box">
+        <h2 class="modal__title"></h2>
+        <p class="modal__text"></p>
+        <div class="project__btn-box">
+          <a class="btn btn--blue modal__git-btn" href="#" target="_blank"
             >View on GitHub
           </a>
-          <a class="btn modal-btn modal-site-btn" href="#" target="_blank"
+          <a class="btn btn--blue modal__site-btn" href="#" target="_blank"
             >View Live Site
           </a>
         </div>
       </div>
     </div>
-    <div class="project-modal-overlay hidden"></div>
+    <div class="modal__overlay hidden"></div>
 
-    <section class="section section-about section--border-top" id="about">
-      <div class="container container--about">
-        <div class="grid grid--about">
-          <div class="about-text-box">
+    <section class="section section-about" id="about">
+      <div class="container container-about">
+        <div class="about">
+          <div class="about__text-box">
             <h2 class="heading-secondary">About me</h2>
-            <p class="about-text">
-              I'm a self taught software developer who enjoys problem solving and learning new technologies. Since transitioning out of my job as a high school science teacher I have been teaching myself to code full time with a focus in front-end web development. I have experience with HTML, CSS, Javscript and Git. Currently I am learning Sass and improving my CSS skills, with a plan to start learning React in the near future.
+            <p class="about__text">
+              I'm a self taught software developer who enjoys problem solving
+              and learning new technologies. Since transitioning out of my job
+              as a high school science teacher I have been teaching myself to
+              code full time with a focus in front-end web development. I have
+              experience with HTML, CSS, Javscript and Git. Currently I am
+              learning Sass and improving my CSS skills, with a plan to start
+              learning React in the near future.
             </p>
           </div>
-          <!-- <div class="about-img-box"> -->
-          <img class="about-img" src="img/headshot.webp" />
-          <!-- </div> -->
+          <img
+            class="about__img"
+            src="img/headshot.webp"
+            alt="Headshot of Kris Doyon"
+          />
         </div>
       </div>
     </section>
 
-    <footer class="section section--border-top">
-      <div class="icon-box">
+    <footer class="footer section--border-top">
+      <div class="footer__icon-box">
         <a href="mailto:kristopher.doyon@gmail.com" target="_blank">
-          <ion-icon class="icon-footer" name="mail-outline"></ion-icon>
+          <svg class="footer__icon">
+            <use href="./img/sprite.svg#icon-envelope"></use>
+          </svg>
         </a>
         <a href="https://www.linkedin.com/in/krisdoyon" target="_blank">
-          <ion-icon class="icon-footer" name="logo-linkedin"></ion-icon>
+          <svg class="footer__icon">
+            <use href="./img/sprite.svg#icon-linkedin"></use>
+          </svg>
         </a>
         <a href="https://github.com/krisdoyon" target="_blank">
-          <ion-icon class="icon-footer" name="logo-github"></ion-icon>
+          <svg class="footer__icon">
+            <use href="./img/sprite.svg#icon-github"></use>
+          </svg>
         </a>
       </div>
       <a href="#">
         <img
           src="img/logo-footer.webp"
-          class="logo-footer"
+          class="footer__logo"
           alt="logo with blue background and yellow letter"
         />
       </a>
     </footer>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>
