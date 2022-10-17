@@ -1,12 +1,7 @@
-const btnNavEl = document.querySelector(".btn-mobile-nav");
-const mainHeaderEl = document.querySelector(".main-header");
+const btnNavEl = document.querySelector(".main-nav__btn-mobile");
+const mainHeaderEl = document.querySelector(".header");
 const bodyEl = document.querySelector("body");
-const allSections = document.querySelectorAll(".section");
-
-btnNavEl.addEventListener("click", function () {
-  mainHeaderEl.classList.toggle("nav-open");
-  bodyEl.classList.toggle("overflow-hidden");
-});
+const allContainers = document.querySelectorAll(".container");
 
 const allLinks = document.querySelectorAll("a:link");
 
@@ -47,6 +42,7 @@ const sectionHeroEl = document.querySelector(".section-hero");
 
 const stickyNav = function (entries) {
   const [entry] = entries;
+
   if (!entry.isIntersecting) bodyEl.classList.add("sticky");
   else bodyEl.classList.remove("sticky");
 };
@@ -66,19 +62,19 @@ observer.observe(sectionHeroEl);
 /////////////////////////////////////////////////////////
 // REVEAL SECTIONS ON SCROLL
 
-// const revealSection = function (entries, observer) {
-//   const [entry] = entries;
-//   if (!entry.isIntersecting) return;
-//   entry.target.classList.remove("section--hidden");
-//   observer.unobserve(entry.target);
-// };
+const revealContainer = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("container--hidden");
+  observer.unobserve(entry.target);
+};
 
-// const sectionObserver = new IntersectionObserver(revealSection, {
-//   root: null,
-//   threshold: 0.15,
-// });
+const containerObserver = new IntersectionObserver(revealContainer, {
+  root: null,
+  threshold: 0.15,
+});
 
-// allSections.forEach(function (section) {
-//   section.classList.add("section--hidden");
-//   sectionObserver.observe(section);
-// });
+allContainers.forEach(function (container) {
+  container.classList.add("container--hidden");
+  containerObserver.observe(container);
+});
