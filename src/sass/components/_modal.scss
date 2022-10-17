@@ -1,0 +1,92 @@
+@use "../abstracts/mixins" as *;
+
+////////////////////////////////////////////////////////////////////
+// MODAL
+
+.modal {
+  @include absolute-center;
+  position: fixed;
+  width: 100rem;
+  height: 80%;
+
+  background-color: #f7f7f7;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--box-shadow-dark);
+  z-index: 9999;
+
+  display: grid;
+  grid-template-rows: minmax(20%, 80%) min-content;
+  overflow: auto;
+
+  @include respond(1200) {
+    width: 85%;
+    height: 85%;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 9998;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 1.2rem;
+    right: 3rem;
+    font-size: 5rem;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: all 0.2s;
+    z-index: 9999;
+
+    &:hover {
+      color: var(--color-blue-secondary);
+    }
+  }
+
+  &__title {
+    color: #333;
+    font-size: 3.2rem;
+  }
+
+  &__text {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  &__img {
+    @include absolute-center;
+    box-shadow: var(--box-shadow-dark);
+    border-radius: var(--border-radius-sm);
+    max-width: 60%;
+    max-height: 75%;
+
+    @include respond(1000) {
+      max-width: 80%;
+    }
+  }
+
+  &__img-box {
+    background-color: #e7e7e7;
+    position: relative;
+  }
+
+  &__info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.4rem 3.6rem;
+    gap: 3.6rem;
+  }
+}
+
+.modal,
+.modal__overlay {
+  transition: all 0.5s;
+}

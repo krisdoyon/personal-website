@@ -1,0 +1,63 @@
+@use "../abstracts/mixins" as *;
+
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    border-radius: 1000rem;
+    padding: 1.2rem 2.4rem;
+    transition: all 0.25s;
+  }
+
+  &:hover {
+    box-shadow: var(--box-shadow-dark);
+    transform: translateY(-0.4rem);
+  }
+
+  &:active {
+    box-shadow: var(--box-shadow-light);
+    transform: translateY(-0.1rem);
+  }
+}
+
+.btn--orange {
+  &:link,
+  &:visited {
+    background-color: var(--color-orange-primary);
+    color: var(--color-text-dark);
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--color-orange-tint);
+  }
+}
+
+.btn--blue {
+  &:link,
+  &:visited {
+    background-color: var(--color-blue-primary);
+    color: var(--color-text-light);
+    font-weight: 700;
+    box-shadow: var(--box-shadow-light);
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--color-blue-secondary);
+  }
+}
+
+.btn--light {
+  &:link,
+  &:visited {
+    background-color: #f7f7f7;
+    color: var(--color-text-dark);
+    box-shadow: var(--box-shadow-light);
+  }
+
+  &:hover,
+  &:active {
+    background-color: var(--color-orange-primary);
+  }
+}
