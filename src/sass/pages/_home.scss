@@ -20,26 +20,6 @@ body {
 
 .section-hero {
   height: 90vh;
-  margin-top: 15rem;
-  padding: 0 2.4rem 0 9.6rem;
-
-  @include respond(1400) {
-    padding: 0 7.2rem;
-  }
-
-  @include respond(1200) {
-    padding: 0 6.4rem;
-    margin-top: 16.5rem;
-  }
-
-  @include respond(1000) {
-    margin-top: 17.5rem;
-  }
-
-  @include respond(600) {
-    margin-top: 24rem;
-    padding: 0 1.2rem;
-  }
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -49,6 +29,16 @@ body {
   @include section-border-top-blur;
   background-image: linear-gradient(transparent, var(--color-blue-primary));
   backdrop-filter: blur(3px);
+}
+
+.projects-text {
+  color: var(--color-text-light);
+  font-size: 2.6rem;
+  margin-bottom: 4rem;
+
+  @include respond(1000) {
+    text-align: center;
+  }
 }
 
 .projects-grid {
@@ -80,7 +70,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   row-gap: 6rem;
   column-gap: 2.4rem;
-  max-width: 90rem;
+  max-width: 80rem;
   margin: 6.4rem auto;
 
   @include respond(600) {
@@ -95,7 +85,7 @@ body {
 
 .skills-text {
   color: #f7f7f7;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
 
   @include respond(1000) {
     text-align: center;
