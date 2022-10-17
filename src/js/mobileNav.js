@@ -1,4 +1,5 @@
 let navOpen = false;
+const headerEl = document.querySelector(".header");
 
 const handleMobileNavClick = function () {
   const topBar = document.querySelector(
@@ -12,7 +13,7 @@ const handleMobileNavClick = function () {
   );
   const barsArr = [...document.querySelectorAll(".main-nav__btn-mobile-bar")];
 
-  document.querySelector(".header").classList.toggle("nav-open");
+  headerEl.classList.toggle("nav-open");
 
   if (navOpen) {
     barsArr.forEach((bar) => {
@@ -36,8 +37,18 @@ const handleMobileNavClick = function () {
   }
 };
 
-export const addMobileNavHandler = function () {
+const handleNavLinkClick = function () {
+  if (headerEl.classList.contains("nav-open")) {
+    headerEl.classList.remove("nav-open");
+  } else return;
+};
+
+export const initializeMobileNav = function () {
   document
     .querySelector(".main-nav__btn-mobile")
     .addEventListener("click", handleMobileNavClick);
+
+  document
+    .querySelector(".main-nav")
+    .addEventListener("click", handleNavLinkClick);
 };
