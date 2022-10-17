@@ -23,7 +23,7 @@ class Project {
               alt="${this.imgAlt}"
             />
             <div class="project__overlay">
-              <h2 class="project__title">${this.title}</h2>
+              <h3 class="project__title">${this.title}</h3>
               <span class="project__more-info">MORE INFO</span>
               <div class="project__btn-box">
                 <a
