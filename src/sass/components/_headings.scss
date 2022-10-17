@@ -9,6 +9,8 @@
   color: var(--color-text-light);
   letter-spacing: 1px;
   animation: moveInRight 1.5s;
+  padding: 0 2.4rem 0 9.6rem;
+  margin-top: 15rem;
 
   strong {
     color: var(--color-orange-primary);
@@ -16,6 +18,16 @@
 
   @include respond(1400) {
     font-size: 4.4rem;
+    padding: 0 7.2rem;
+  }
+
+  @include respond(1200) {
+    padding: 0 6.4rem;
+    margin-top: 16.5rem;
+  }
+
+  @include respond(1000) {
+    margin-top: 17.5rem;
   }
 
   @include respond(800) {
@@ -24,6 +36,8 @@
   }
 
   @include respond(600) {
+    margin-top: 24rem;
+    padding: 0 1.2rem;
     font-size: 4rem;
   }
 
