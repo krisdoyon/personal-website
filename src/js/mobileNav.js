@@ -37,12 +37,6 @@ const handleMobileNavClick = function () {
   }
 };
 
-const handleNavLinkClick = function () {
-  if (headerEl.classList.contains("nav-open")) {
-    headerEl.classList.remove("nav-open");
-  } else return;
-};
-
 export const initializeMobileNav = function () {
   document
     .querySelector(".main-nav__btn-mobile")
@@ -50,5 +44,5 @@ export const initializeMobileNav = function () {
 
   document
     .querySelector(".main-nav")
-    .addEventListener("click", handleNavLinkClick);
+    .addEventListener("click", handleMobileNavClick);
 };
