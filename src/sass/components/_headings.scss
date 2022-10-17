@@ -38,10 +38,11 @@
 }
 
 .heading-secondary {
-  font-size: 4.4rem;
-  font-weight: 500;
+  font-size: 3.6rem;
+  font-weight: 600;
   color: var(--color-orange-primary);
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
+  text-transform: uppercase;
 
   @include respond(1000) {
     text-align: center;
