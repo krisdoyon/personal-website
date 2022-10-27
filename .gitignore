@@ -1,7 +1,5 @@
 node_modules/
-css/styles.comp.css
-css/styles.comp.css.map
-css/styles.prefix.css
+css/
 todo.md
 img/icomoon
 .parcel-cache/
