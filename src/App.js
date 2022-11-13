@@ -15,8 +15,8 @@ function App() {
       {isModalOpen && <Modal />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="all-projects" element={<AllProjects />} />
-        <Route path="*" element={<Error />} />
+        <Route path="/all-projects" element={<AllProjects />} />
+        <Route path="/*" element={<Error />} />
       </Routes>
     </Router>
   );
