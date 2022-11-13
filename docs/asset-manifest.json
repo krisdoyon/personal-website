@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3b271e31.css",
+    "main.js": "/static/js/main.aa5c4587.js",
+    "static/media/hero-img.webp": "/static/media/hero-img.767411ca18cf0f46d015.webp",
+    "static/media/hero-img-mobile.webp": "/static/media/hero-img-mobile.593a1f0d30d4b82d6eaa.webp",
+    "static/media/weather-screenshot.webp": "/static/media/weather-screenshot.332cdc0af8b077a7260a.webp",
+    "static/media/forkify-screenshot.webp": "/static/media/forkify-screenshot.076e602617b4088955b8.webp",
+    "static/media/peak-tracker-screenshot.webp": "/static/media/peak-tracker-screenshot.84514a525f526db4130a.webp",
+    "static/media/crux-screenshot.webp": "/static/media/crux-screenshot.feec44e76a6784bf629b.webp",
+    "static/media/personal-website-screenshot.webp": "/static/media/personal-website-screenshot.fdf1de664c1e57e4bb55.webp",
+    "static/media/book-club-screenshot.webp": "/static/media/book-club-screenshot.f9ee7c3f69fc2aea856a.webp",
+    "static/media/trillo-screenshot.webp": "/static/media/trillo-screenshot.9f260df51d5ea6b1bdb0.webp",
+    "static/media/headshot.webp": "/static/media/headshot.ba9bfb64ba8a338e4d7c.webp",
+    "static/media/calc-screenshot.webp": "/static/media/calc-screenshot.b6ea197f034e1cd5a44c.webp",
+    "static/media/nexter-screenshot.webp": "/static/media/nexter-screenshot.9780bd8b654f60916839.webp",
+    "static/media/cocktails-screenshot.webp": "/static/media/cocktails-screenshot.c06d537601ea5aa05ea6.webp",
+    "static/media/natours-screenshot.webp": "/static/media/natours-screenshot.32335843bbfe248637a9.webp",
+    "static/media/sprite.svg": "/static/media/sprite.57595d9d67f890447bdd7875742c234a.svg",
+    "static/media/logo-footer.webp": "/static/media/logo-footer.f1e5ad33810bf790802c.webp",
+    "static/media/trivia-screenshot.webp": "/static/media/trivia-screenshot.c1002924b6cf4d281a73.webp",
+    "static/media/logo.webp": "/static/media/logo.ccbc217085c4a6fa95de.webp",
+    "index.html": "/index.html",
+    "static/media/chevron-right-solid.svg": "/static/media/chevron-right-solid.02120b307e31b7552ddb.svg",
+    "main.3b271e31.css.map": "/static/css/main.3b271e31.css.map",
+    "main.aa5c4587.js.map": "/static/js/main.aa5c4587.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3b271e31.css",
+    "static/js/main.aa5c4587.js"
+  ]
+}
