@@ -15,7 +15,7 @@ const Projects = () => {
 
   useEffect(() => {
     addSectionObserver(containerRef);
-  }, []);
+  }, [addSectionObserver]);
 
   return (
     <section className="section section-projects" id="projects">

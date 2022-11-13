@@ -8,7 +8,7 @@ const Skills = () => {
 
   useEffect(() => {
     addSectionObserver(containerRef);
-  }, []);
+  }, [addSectionObserver]);
   return (
     <section className="section section-skills" id="skills">
       <div className="container container-preload" ref={containerRef}>

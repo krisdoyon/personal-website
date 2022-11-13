@@ -8,7 +8,7 @@ const About = () => {
 
   useEffect(() => {
     addSectionObserver(containerRef);
-  }, []);
+  }, [addSectionObserver]);
 
   return (
     <section className="section section-about" id="about">
