@@ -1,13 +1,16 @@
 @use "../abstracts/mixins" as *;
 
-.home {
-  background-image: url(../../img/hero-img.webp);
+////////////////////////////////////////////////////////////////////
+// BACKGROUND IMAGE
+
+body {
+  background-image: url(../img/hero-img.webp);
   background-size: cover;
   background-position: bottom left;
   background-attachment: fixed;
 
   @include respond(600) {
-    background-image: url(../../img/hero-img-mobile.webp);
+    background-image: url(../img/hero-img-mobile.webp);
     background-position: bottom right;
   }
 }
@@ -66,7 +69,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 6rem;
-  column-gap: 6rem;
+  column-gap: 2.4rem;
   max-width: 80rem;
   margin: 6.4rem auto;
 

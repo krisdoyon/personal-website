@@ -1,14 +1,15 @@
 @use "../abstracts/mixins" as *;
 
 .btn {
-  &:link,
-  &:visited {
-    text-decoration: none;
-    border-radius: 1000rem;
-    padding: 1.2rem 2.4rem;
-    transition: all 0.25s;
-  }
-
+  text-decoration: none;
+  border-radius: 1000rem;
+  padding: 1.2rem 2.4rem;
+  transition: all 0.25s;
+  border: none;
+  font-family: inherit;
+  font-size: 1.4rem;
+  cursor: pointer;
+ 
   &:hover {
     box-shadow: var(--box-shadow-dark);
     transform: translateY(-0.4rem);
@@ -21,11 +22,8 @@
 }
 
 .btn--orange {
-  &:link,
-  &:visited {
-    background-color: var(--color-orange-primary);
-    color: var(--color-text-dark);
-  }
+  background-color: var(--color-orange-primary);
+  color: var(--color-text-dark);
 
   &:hover,
   &:active {
@@ -34,13 +32,10 @@
 }
 
 .btn--blue {
-  &:link,
-  &:visited {
-    background-color: var(--color-blue-primary);
-    color: var(--color-text-light);
-    font-weight: 700;
-    box-shadow: var(--box-shadow-light);
-  }
+  background-color: var(--color-blue-primary);
+  color: var(--color-text-light);
+  font-weight: 700;
+  box-shadow: var(--box-shadow-light);
 
   &:hover,
   &:active {
@@ -49,15 +44,18 @@
 }
 
 .btn--light {
-  &:link,
-  &:visited {
-    background-color: #f7f7f7;
-    color: var(--color-text-dark);
-    box-shadow: var(--box-shadow-light);
-  }
+  background-color: #f7f7f7;
+  color: var(--color-text-dark);
+  box-shadow: var(--box-shadow-light);
 
   &:hover,
   &:active {
     background-color: var(--color-orange-primary);
   }
+}
+
+.btn-view-all {
+  margin-top: 10rem;
+  font-size: 1.6rem;
+  align-self: center;
 }

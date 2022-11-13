@@ -1,0 +1,35 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "",
+  "browserlist": "> 0.5%, last 10 versions, not dead",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html --dist-dir docs --no-source-maps --public-url ./",
+    "watch:sass": "sass src/sass/main.scss src/css/styles.css -w",
+    "compile:sass": "sass sass/main.scss css/styles.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/styles.comp.css -o css/styles.prefix.css",
+    "compress:css": "sass css/styles.prefix.css css/styles.css --style=compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krisdoyon/personal-website"
+  },
+  "author": "Kris Doyon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krisdoyon/personal-website/issues"
+  },
+  "homepage": "https://krisdoyon.com",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "autoprefixer": "^10.4.12",
+    "npm-run-all": "^4.1.5",
+    "parcel": "^2.7.0",
+    "postcss-cli": "^10.0.0",
+    "querystring-es3": "^0.2.1",
+    "sass": "^1.55.0",
+    "url": "^0.11.0"
+  }
+}

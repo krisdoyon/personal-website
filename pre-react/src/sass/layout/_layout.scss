@@ -1,8 +1,6 @@
 @use "../abstracts/mixins" as *;
 
 .container {
-  display: flex;
-  flex-direction: column;
   max-width: 130rem;
   margin: 0 auto;
   padding: 12.8rem 7.2rem 16rem;
@@ -20,7 +18,7 @@
 
 // USED FOR REVEAL SECTIONS ON SCROLL
 
-.container-preload {
+.container--hidden {
   opacity: 0;
   transform: translateX(-12rem);
 }
