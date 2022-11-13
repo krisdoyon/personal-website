@@ -1,10 +1,12 @@
 import { useGlobalContext } from "./context/context";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+// PAGES
 import Home from "./pages/Home";
 import AllProjects from "./pages/AllProjects";
 import Error from "./pages/Error";
-
 import Modal from "./components/Modal";
+// SASS
+import "./sass/main.scss";
 
 function App() {
   const { isModalOpen } = useGlobalContext();
