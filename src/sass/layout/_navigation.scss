@@ -75,6 +75,14 @@
     transition: transform 0.3s ease;
   }
 
+  &__link.active {
+    color: var(--color-orange-primary);
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
   &__list &__link:hover::before {
     transform: scaleX(1);
   }

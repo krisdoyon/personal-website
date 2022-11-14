@@ -3,7 +3,7 @@ import { useGlobalContext } from "../context/context";
 import logo from "../img/logo.webp";
 
 const Navbar = () => {
-  const { headerRef } = useGlobalContext();
+  const { headerRef, activeSection } = useGlobalContext();
   const [isNavOpen, setIsNavOpen] = useState(false);
   const barRef = useRef();
 
@@ -15,17 +15,32 @@ const Navbar = () => {
       <nav className="nav" onClick={() => setIsNavOpen(!isNavOpen)}>
         <ul className="nav__list">
           <li>
-            <a className="nav__link" href="#projects">
+            <a
+              className={`nav__link ${
+                activeSection === "projects" ? "active" : ""
+              }`}
+              href="#projects"
+            >
               Projects
             </a>
           </li>
           <li>
-            <a className="nav__link" href="#skills">
+            <a
+              className={`nav__link ${
+                activeSection === "skills" ? "active" : ""
+              }`}
+              href="#skills"
+            >
               Skills
             </a>
           </li>
           <li>
-            <a className="nav__link" href="#about">
+            <a
+              className={`nav__link ${
+                activeSection === "about" ? "active" : ""
+              }`}
+              href="#about"
+            >
               About
             </a>
           </li>
