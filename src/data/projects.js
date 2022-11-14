@@ -30,7 +30,7 @@ const peakTracker = new Project(
   "peak-tracker",
   "Peak Tracker",
   peakTrackerImg,
-  "Peak Tracker is a web app designed to track user progress of mountain summit peakbagging lists. I built this project using the model-view-controller architecture. I extracted relevant mountain data from text files downloaded from the USGS Geographic Names Information System using a NodeJS script. In addition to MVC, I practiced event delegation, DOM manipulation and state management in this project.",
+  "A web app designed to track user progress of mountain summit peakbagging lists. I built this project using the model-view-controller architecture. I extracted relevant mountain data from text files downloaded from the USGS Geographic Names Information System using a NodeJS script. In addition to MVC, I practiced event delegation, DOM manipulation and state management using local storage.",
   ["featured", "independent"]
 );
 
@@ -38,7 +38,7 @@ const bookClub = new Project(
   "book-club",
   "Book Club Website",
   bookClubImg,
-  "Book club description",
+  "A website I built using React for my book club to track books read and book ratings. I used the chart.js library to implement chart components. I practiced using react router and managing controlled inputs in this project. I downloaded book information and ratings data from a spreadsheet as a .csv file and wrote the data to JSON using a Node JS script.",
   ["featured", "independent"]
 );
 
@@ -78,7 +78,7 @@ const personalWebsite = new Project(
   "personal-website",
   "Personal Website",
   personalWebsiteImg,
-  "Personal website description",
+  "I built this website to serve as my web developer portfolio. It is built with React and uses React Router. I practiced building reusable react components, react hooks, using the context API and using the intersection observer API.",
   ["independent"]
 );
 
@@ -90,7 +90,7 @@ const forkify = new Project(
   "forkify",
   "Forkify",
   forkifyImg,
-  "A simple recipe application created through Jonas Schmedtmann's Javascript course on Udemy. This project was built using the Module-View-Controller architecture. Features include searching recipes by keywords, adjusting ingredient amounts based on servings, bookmarking recipes and adding personalized recipes. Recipe data comes from the Forkify v2 API and Parcel was used to bundle the application.",
+  "A JavaScript application created through Jonas Schmedtmann's Javascript course on Udemy. This project was built using the Module-View-Controller architecture. Features include searching recipes by keywords, adjusting ingredient amounts based on servings, bookmarking recipes and adding personalized recipes. Recipe data comes from the Forkify v2 API and Parcel was used to bundle the application.",
   ["educational"]
 );
 
@@ -122,7 +122,7 @@ const cocktails = new Project(
   "cocktails",
   "Cocktails DB",
   cocktailsImg,
-  "A web app for searching and displaying details for cocktails completed as a part of John Smilga's React course on Udemy. In this project I practiced building react components, react hooks, react router, fetching data and using the context API.",
+  "An app built with React for searching and displaying details for cocktails, completed as a part of John Smilga's React course on Udemy. In this project I practiced building react components, react hooks, react router, fetching data and using the context API.",
   ["educational"]
 );
 
