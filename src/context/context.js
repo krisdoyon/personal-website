@@ -6,6 +6,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalProject, setModalProject] = useState(null);
+  const [activeSection, setActiveSection] = useState(null);
 
   const headerRef = useRef();
 
@@ -20,21 +21,6 @@ const AppProvider = ({ children }) => {
     setModalProject(null);
   };
 
-  const revealContainer = function (entries, observer) {
-    const [entry] = entries;
-    if (!entry.isIntersecting) return;
-    entry.target.classList.remove("container-preload");
-    observer.unobserve(entry.target);
-  };
-
-  const addSectionObserver = function (ref) {
-    const observer = new IntersectionObserver(revealContainer, {
-      root: null,
-      threshold: 0.15,
-    });
-    observer.observe(ref.current);
-  };
-
   return (
     <AppContext.Provider
       value={{
@@ -42,9 +28,10 @@ const AppProvider = ({ children }) => {
         modalProject,
         openModal,
         closeModal,
-        addSectionObserver,
         headerRef,
         projects,
+        activeSection,
+        setActiveSection,
       }}
     >
       {children}
