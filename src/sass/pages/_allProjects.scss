@@ -1,6 +1,7 @@
 .all-projects {
   background-color: var(--color-blue-primary);
   min-height: 100vh;
+  position: relative;
 
   &__container {
     display: flex;
@@ -16,11 +17,6 @@
     margin-bottom: 8rem;
     min-width: 70%;
     align-self: center;
-  }
-
-  & .btn-home {
-    align-self: center;
-    margin-bottom: 8rem;
   }
 }
 

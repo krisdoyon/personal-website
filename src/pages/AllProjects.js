@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useGlobalContext } from "../context/context";
 import ProjectRow from "../components/ProjectRow";
 import Footer from "../components/Footer";
+import logo from "../img/logo.webp";
 
 const AllProjects = () => {
   const { projects } = useGlobalContext();
@@ -16,10 +17,16 @@ const AllProjects = () => {
   );
   return (
     <div className="all-projects">
-      <div className="all-projects__container">
-        <Link to="/" className="btn btn--orange btn-home">
-          BACK TO HOME
+      <header className="header">
+        <Link to="/">
+          <img className="header__logo" src={logo} alt="outlined logo" />
         </Link>
+        <Link to="/" className="btn btn--orange btn-home">
+          BACK HOME
+        </Link>
+      </header>
+
+      <div className="all-projects__container">
         <h2 className="heading-secondary">Independent Projects</h2>
         <p className="projects-text">
           Projects which I have designed and created myself:
