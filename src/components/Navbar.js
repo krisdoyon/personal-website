@@ -7,12 +7,18 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const barRef = useRef();
 
+  const handleMobileNavClick = () => {
+    if (window.matchMedia("(max-width: 1000px").matches) {
+      setIsNavOpen(!isNavOpen);
+    }
+  };
+
   return (
     <header className={`header ${isNavOpen ? "nav-open" : ""}`} ref={headerRef}>
       <a href="#">
         <img className="header__logo" src={logo} alt="outlined logo" />
       </a>
-      <nav className="nav" onClick={() => setIsNavOpen(!isNavOpen)}>
+      <nav className="nav" onClick={handleMobileNavClick}>
         <ul className="nav__list">
           <li>
             <a
@@ -75,12 +81,7 @@ const Navbar = () => {
         </a>
       </nav>
 
-      <button
-        className="nav__btn-mobile"
-        onClick={() => {
-          setIsNavOpen(!isNavOpen);
-        }}
-      >
+      <button className="nav__btn-mobile" onClick={handleMobileNavClick}>
         <div
           className="nav__btn-mobile-bar"
           style={{
