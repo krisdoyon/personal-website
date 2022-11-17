@@ -46,7 +46,7 @@ const trivia = new Project(
   "trivia",
   "Trivia Game",
   triviaImg,
-  "A simple trivia game using data from The Trivia API (https://the-trivia-api.com). XMLHttpRequest was used to fetch data from the API. In this project I practiced using array methods, event bubbling, using timers and randomizing data.",
+  "A trivia game using data from The Trivia API (https://the-trivia-api.com). I originally built this project using Vanilla JS and recently refactored it using React to practice using the useReducer hook and state management. In this project I also practiced using array methods, using timers and randomizing data.",
   ["featured", "independent"]
 );
 
