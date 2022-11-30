@@ -8,6 +8,7 @@ import nexterImg from "../img/screenshots/nexter-screenshot.webp";
 import trilloImg from "../img/screenshots/trillo-screenshot.webp";
 import personalWebsiteImg from "../img/screenshots/personal-website-screenshot.webp";
 import peakTrackerImg from "../img/screenshots/peak-tracker-screenshot.webp";
+import seedsImg from "../img/screenshots/seeds-screenshot.webp";
 import triviaImg from "../img/screenshots/trivia-screenshot.webp";
 import weatherImg from "../img/screenshots/weather-screenshot.webp";
 
@@ -25,6 +26,14 @@ class Project {
 }
 
 // INDEPENDENT
+
+const seeds = new Project(
+  "seeds",
+  "Harvest Seed Company",
+  seedsImg,
+  "An ecommerce site for a fictional vegetable seed company built with React and Redux Toolkit. I used React Router for client side routing and SCSS modules for styling. Features include adding items to cart and wishlist, filtering and sorting products, applying promo codes, checkout form with validation and submitting orders with automatic product in stock quantity updates.",
+  ["featured", "independent"]
+);
 
 const peakTracker = new Project(
   "peak-tracker",
@@ -127,6 +136,7 @@ const cocktails = new Project(
 );
 
 export const projects = [
+  seeds,
   personalWebsite,
   peakTracker,
   bookClub,
