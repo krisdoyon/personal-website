@@ -20,7 +20,7 @@ const Projects = () => {
           const { id } = project;
           return <ProjectCard key={id} {...project}></ProjectCard>;
         })}
-        <div className="project coming-soon"></div>
+        {/* <div className="project coming-soon"></div> */}
       </div>
       <Link to="/all-projects" className="btn btn--orange btn-view-all">
         VIEW ALL
