@@ -12,6 +12,30 @@ const Skills = () => {
       <div className="skills-grid">
         <div className="skill">
           <svg className="skill__icon">
+            <use href={`${sprite}#icon-react`}></use>
+          </svg>
+          <h3 className="skill__label">React</h3>
+        </div>
+        <div className="skill">
+          <svg className="skill__icon">
+            <use href={`${sprite}#icon-javascript`}></use>
+          </svg>
+          <h3 className="skill__label">Javascript</h3>
+        </div>
+        <div className="skill">
+          <svg className="skill__icon">
+            <use href={`${sprite}#icon-redux`}></use>
+          </svg>
+          <h3 className="skill__label">Redux</h3>
+        </div>
+        <div className="skill">
+          <svg className="skill__icon">
+            <use href={`${sprite}#icon-git`}></use>
+          </svg>
+          <h3 className="skill__label">Git</h3>
+        </div>
+        <div className="skill">
+          <svg className="skill__icon">
             <use href={`${sprite}#icon-html5`}></use>
           </svg>
           <h3 className="skill__label">HTML</h3>
@@ -22,24 +46,14 @@ const Skills = () => {
           </svg>
           <h3 className="skill__label">CSS</h3>
         </div>
-        <div className="skill">
-          <svg className="skill__icon">
-            <use href={`${sprite}#icon-javascript`}></use>
-          </svg>
-          <h3 className="skill__label">Javascript</h3>
-        </div>
+
         <div className="skill">
           <svg className="skill__icon">
             <use href={`${sprite}#icon-sass`}></use>
           </svg>
           <h3 className="skill__label">Sass</h3>
         </div>
-        <div className="skill">
-          <svg className="skill__icon">
-            <use href={`${sprite}#icon-git`}></use>
-          </svg>
-          <h3 className="skill__label">Git</h3>
-        </div>
+
         <div className="skill">
           <svg className="skill__icon">
             <use href={`${sprite}#icon-npm`}></use>
@@ -51,9 +65,15 @@ const Skills = () => {
       <div className="skills-grid">
         <div className="skill">
           <svg className="skill__icon">
-            <use href={`${sprite}#icon-react`}></use>
+            <use href={`${sprite}#icon-typescript`}></use>
           </svg>
-          <h3 className="skill__label">React</h3>
+          <h3 className="skill__label">Typescript</h3>
+        </div>
+        <div className="skill">
+          <svg className="skill__icon">
+            <use href={`${sprite}#icon-next-js`}></use>
+          </svg>
+          <h3 className="skill__label">Next.js</h3>
         </div>
       </div>
     </Section>
