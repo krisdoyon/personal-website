@@ -31,7 +31,7 @@ const seeds = new Project(
   "seeds",
   "Harvest Seed Company",
   seedsImg,
-  "An ecommerce site for a fictional vegetable seed company built with React and Redux Toolkit. I used React Router for client side routing and SCSS modules for styling. Features include adding items to cart and wishlist, filtering and sorting products, applying promo codes, checkout form with validation and submitting orders with automatic product in stock quantity updates.",
+  "An ecommerce site for a fictional vegetable seed company built with React and Redux. I used React Router for client side routing and SCSS modules for styling. Features include adding items to cart and wishlist, filtering and sorting products, applying promo codes, checkout form with validation and submitting orders with automatic updates to product in stock quantities.",
   ["featured", "independent"]
 );
 
@@ -79,7 +79,7 @@ const weather = new Project(
   "weather",
   "Weather App",
   weatherImg,
-  "A simple weather app to practice using APIs. I used the OpenStreetMap Nominatim API to implement location search functionality, the OpenWeather and OpenMeteo APIs to fetch weather data, and the lunarphase-js module (via npm) to get the current moon phase. I used the geolocation API to automatically get weather data using the user's location, and Parcel for bundling the application.",
+  "A simple weather app to practice using APIs, error handling and async actions using Redux. I used the Axios HTTP library to fetch data from four different API sources and an external package (lunarphase-js) for lunar data. I originally built this app using vanilla JavaScript and recently converted it to a React application where I practiced reviewing, refactoring and optimizing existing code.  ",
   ["featured", "independent"]
 );
 
