@@ -27,7 +27,7 @@ const Hero = () => {
           <strong>Kris Doyon.</strong>
         </span>
         <span>
-          I'm an aspiring <br className="heading-primary__br-2" />
+          I'm a frontend <br className="heading-primary__br-2" />
           software developer.
         </span>
       </h1>
