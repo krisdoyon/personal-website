@@ -1,0 +1,84 @@
+@use "../../assets/mixins" as *;
+
+.wrapper {
+  @include absolute-center;
+  position: fixed;
+  width: 100rem;
+  height: 80%;
+
+  background-color: #f7f7f7;
+  border-radius: var(--border-radius-sm);
+  box-shadow: var(--box-shadow-dark);
+  z-index: 9999;
+
+  display: grid;
+  grid-template-rows: minmax(20%, 80%) min-content;
+  overflow: auto;
+  transition: all 0.5s;
+
+  @include respond(1200) {
+    width: 85%;
+    height: 85%;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 3rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: all 0.2s;
+  z-index: 9999;
+
+  &:hover {
+    color: var(--color-blue-secondary);
+  }
+}
+
+.btn {
+  text-transform: none;
+}
+
+.title {
+  color: #333;
+  font-size: 3.2rem;
+}
+
+.text {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.img-container {
+  background-color: #e7e7e7;
+  position: relative;
+
+  img {
+    @include absolute-center;
+    box-shadow: var(--box-shadow-dark);
+    border-radius: var(--border-radius-sm);
+    max-width: 60%;
+    max-height: 75%;
+
+    @include respond(1000) {
+      max-width: 80%;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.4rem 3.6rem;
+  gap: 3.6rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}

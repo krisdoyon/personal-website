@@ -1,0 +1,73 @@
+@use "../../../assets/mixins" as *;
+
+.wrapper {
+  height: 90vh;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--color-text-light);
+  letter-spacing: 1px;
+  animation: moveInRight 1.5s;
+  margin: 15rem 9.6rem 0 9.6rem;
+
+  strong {
+    color: var(--color-orange-primary);
+  }
+
+  @include respond(1400) {
+    font-size: 4.4rem;
+    margin: 15rem 7.2rem 0 7.2rem;
+  }
+
+  @include respond(1200) {
+    margin: 16.5rem 6.4rem 0 6.4rem;
+  }
+
+  @include respond(1000) {
+    margin-top: 17.5rem;
+  }
+
+  @include respond(800) {
+    text-align: center;
+    gap: 1.6rem;
+  }
+
+  @include respond(600) {
+    margin-top: 18.5rem;
+    padding: 0 1.2rem;
+    font-size: 4rem;
+  }
+}
+
+.break {
+  display: none;
+
+  @include respond(800) {
+    display: block;
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-8rem);
+  }
+
+  80% {
+    transform: translateX(2rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.wrapper.sticky {
+  margin-top: 8rem;
+}

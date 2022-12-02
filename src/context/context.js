@@ -1,5 +1,5 @@
 import React, { useContext, useState, useRef } from "react";
-import { projects } from "../data/projects";
+import { projects } from "../assets/projects";
 
 const AppContext = React.createContext();
 
@@ -7,6 +7,7 @@ const AppProvider = ({ children }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalProject, setModalProject] = useState(null);
   const [activeSection, setActiveSection] = useState(null);
+  const [stickyNav, setStickyNav] = useState(false);
 
   const headerRef = useRef();
 
@@ -32,6 +33,8 @@ const AppProvider = ({ children }) => {
         projects,
         activeSection,
         setActiveSection,
+        stickyNav,
+        setStickyNav,
       }}
     >
       {children}

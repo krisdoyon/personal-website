@@ -1,0 +1,36 @@
+@use "../../assets/mixins" as *;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0 4rem;
+  height: 8rem;
+  position: relative;
+}
+
+.logo {
+  filter: grayscale(100%) brightness(150%);
+  height: 6rem;
+
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 2.4rem;
+  transform: translateY(-50%);
+
+  transition: all 0.2s;
+  &:hover {
+    filter: none;
+  }
+}
+
+header.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  height: 8rem;
+  background-color: var(--color-blue-primary);
+}

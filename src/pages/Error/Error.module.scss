@@ -1,0 +1,36 @@
+@use "../../assets/mixins" as *;
+
+.section {
+  background-color: var(--color-blue-primary);
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 12rem 7.2rem 0;
+
+  @include respond(1000) {
+    align-items: center;
+  }
+}
+
+.text {
+  color: var(--color-text-light);
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+
+  @include respond(1000) {
+    text-align: center;
+  }
+}
+
+.btn {
+  align-self: flex-start;
+
+  @include respond(1000) {
+    align-self: center;
+  }
+}

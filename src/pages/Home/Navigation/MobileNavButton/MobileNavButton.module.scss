@@ -1,0 +1,29 @@
+@use "../../../../assets/mixins" as *;
+
+.wrapper {
+  border: none;
+  background: none;
+  display: none;
+
+  padding: 4rem;
+  border: none;
+  border-radius: 1000rem;
+  z-index: 1000;
+  cursor: pointer;
+  position: relative;
+
+  @include respond(1000) {
+    display: block;
+  }
+}
+
+.bar {
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4rem;
+  transition: all 0.2s;
+}

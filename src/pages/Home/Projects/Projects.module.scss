@@ -1,0 +1,38 @@
+@use "../../../assets/mixins" as *;
+
+.wrapper {
+  @include section-border-top-blur;
+  background-image: linear-gradient(transparent, var(--color-blue-primary));
+  backdrop-filter: blur(3px);
+}
+
+.text {
+  color: var(--color-text-light);
+  font-size: 2.6rem;
+  margin-bottom: 4rem;
+
+  @include respond(1000) {
+    text-align: center;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6rem;
+
+  @include respond(1200) {
+    gap: 4.4rem;
+  }
+
+  @include respond(800) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}
+
+.btn-view-all {
+  margin-top: 10rem;
+  font-size: 1.6rem;
+  align-self: center;
+}
