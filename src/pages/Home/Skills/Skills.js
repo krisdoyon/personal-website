@@ -3,16 +3,7 @@ import Section from "../../../components/Section";
 import Skill from "./Skill";
 
 const Skills = () => {
-  const skills = [
-    "React",
-    "Javascript",
-    "Redux",
-    "Git",
-    "HTML",
-    "CSS",
-    "Sass",
-    "npm",
-  ];
+  const skills = ["React", "Javascript", "Redux", "Git", "HTML", "CSS", "Sass"];
 
   const currentlyLearning = ["Typescript", "Next.js"];
 
