@@ -1,6 +1,8 @@
 import styles from "./Hero.module.scss";
 import { useEffect, useRef } from "react";
 import { useGlobalContext } from "../../../context/context";
+import Button from "../../../components/Button/Button";
+import resume from "../../../assets/kris_doyon_resume.pdf";
 
 const Hero = () => {
   const { headerRef, stickyNav, setStickyNav } = useGlobalContext();
@@ -35,6 +37,15 @@ const Hero = () => {
           I'm a frontend <br className={styles.break} />
           software developer.
         </span>
+        <Button
+          Tag="a"
+          color="orange"
+          href={resume}
+          className={styles["btn-resume"]}
+          download="kris_doyon_resume.pdf"
+        >
+          view my resume
+        </Button>
       </h1>
     </section>
   );
