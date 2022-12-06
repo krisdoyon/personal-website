@@ -12,13 +12,14 @@ const Section = ({ children, className, id }) => {
   useEffect(() => {
     const revealContainer = function (entries, observer) {
       const [entry] = entries;
+      console.log(entry);
       if (!entry.isIntersecting) return;
       setIsVisible(true);
       observer.unobserve(entry.target);
     };
     const observer = new IntersectionObserver(revealContainer, {
       root: null,
-      rootMargin: "-200px",
+      rootMargin: "-20%",
     });
     observer.observe(containerRef.current);
   }, []);
