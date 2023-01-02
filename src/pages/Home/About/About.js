@@ -12,7 +12,8 @@ const About = () => {
             I'm a self taught software developer who enjoys problem solving and
             learning new technologies. Since transitioning out of my job as a
             high school science teacher I have been teaching myself to code full
-            time with a focus in front-end web development.
+            time with a focus in front-end web development. I am actively
+            seeking a full time frontend software role.
           </p>
         </div>
         <img
