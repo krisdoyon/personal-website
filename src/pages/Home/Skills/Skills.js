@@ -3,9 +3,18 @@ import Section from "../../../components/Section";
 import Skill from "./Skill";
 
 const Skills = () => {
-  const skills = ["React", "Javascript", "Redux", "Git", "HTML", "CSS", "Sass"];
+  const skills = [
+    "React",
+    "Javascript",
+    "Redux",
+    "Git",
+    "HTML",
+    "CSS",
+    "Sass",
+    "Jest",
+  ];
 
-  const currentlyLearning = ["Typescript", "Next.js"];
+  const currentlyLearning = ["Typescript"];
 
   return (
     <Section className={styles.wrapper} id="skills">
