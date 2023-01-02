@@ -1,4 +1,3 @@
-import styles from "./Section.module.scss";
 import { useState, useEffect, useRef } from "react";
 import { useGlobalContext } from "../../context/context";
 
