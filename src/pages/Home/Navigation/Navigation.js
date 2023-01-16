@@ -8,7 +8,6 @@ const Navigation = () => {
   const { activeSection } = useGlobalContext();
   const [isNavOpen, setIsNavOpen] = useState(false);
 
-  
   const handleMobileNavClick = () => {
     if (window.matchMedia("(max-width: 1000px").matches) {
       setIsNavOpen(!isNavOpen);
@@ -77,7 +76,7 @@ const Navigation = () => {
           Tag="a"
           color="orange"
           className={styles.contact}
-          href="mailto:kristopher.doyon@gmail.com"
+          href="mailto:kris.doyon@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >

@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className={styles.wrapper}>
       <div className={styles["icons-container"]}>
         <a
-          href="mailto:kristopher.doyon@gmail.com"
+          href="mailto:kris.doyon@gmail.com"
           target="_blank"
           aria-label="footer email link"
           rel="noopener noreferrer"
