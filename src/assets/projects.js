@@ -1,5 +1,5 @@
 import bookClubImg from "../img/screenshots/book-club-screenshot.webp";
-import calcImg from "../img/screenshots/calc-screenshot.webp";
+// import calcImg from "../img/screenshots/calc-screenshot.webp";
 import cocktailsImg from "../img/screenshots/cocktails-screenshot.webp";
 import cruxImg from "../img/screenshots/crux-screenshot.webp";
 import forkifyImg from "../img/screenshots/forkify-screenshot.webp";
@@ -31,7 +31,7 @@ const seeds = new Project(
   "seeds",
   "Harvest Seed Company",
   seedsImg,
-  "An ecommerce site for a fictional vegetable seed company built with React and Redux. I used React Router for client side routing and SCSS modules for styling. Features include adding items to cart and wishlist, filtering and sorting products, applying promo codes, checkout form with validation and submitting orders with automatic updates to product in stock quantities.",
+  "An ecommerce site for a fictional vegetable seed company built with React, Redux and Firebase. I used React Router for client side routing and SCSS modules for styling. I used Firebase Realtime Database as a backend and implemented authentication using JSON web tokens and the Firebase Authentication serivce. HTTP actions are handled using Redux async thunks and the Axios HTTP library. I also practiced writing unit and integration tests using Jest and the React Testing Library in this project.",
   ["featured", "independent"]
 );
 
@@ -39,7 +39,7 @@ const peakTracker = new Project(
   "peak-tracker",
   "Peak Tracker",
   peakTrackerImg,
-  "A web app designed to track user progress of mountain summit peakbagging lists. I built this project using the model-view-controller architecture. I extracted relevant mountain data from text files downloaded from the USGS Geographic Names Information System using a NodeJS script. In addition to MVC, I practiced event delegation, DOM manipulation and state management using local storage.",
+  "A web app designed for hikers to track progress of mountain summit peakbagging lists. I built this project using the model-view-controller architecture. I used Sass partials and the 7-1 pattern for styling, following BEM conventions for naming CSS classes. Local Storage API is used for state management/persistence. Data encapsulation using native JavaScript private class features. Mountain data is curated from the U.S. Geological Survey. I am currently converting this project to React and Typescript using Vite.",
   ["featured", "independent"]
 );
 
@@ -47,7 +47,7 @@ const bookClub = new Project(
   "book-club",
   "Book Club Website",
   bookClubImg,
-  "A website I built using React for my book club to track books read and book ratings. I used the chart.js library to implement chart components. I practiced using react router and managing controlled inputs in this project. I downloaded book information and ratings data from a spreadsheet as a .csv file and wrote the data to JSON using a Node JS script.",
+  "A website I built using React for my book club to track books read, ratings and statistics over time. I used the chart.js library to implement custom chart/graph components. Client side state management using React Context combined with the useReducer hook. RTK Query is used for data fetching, caching and server side state management. I also practiced managing controlled inputs and filtering, sorting and conditionally rendering data based on user inputs in this project.",
   ["featured", "independent"]
 );
 
@@ -55,23 +55,23 @@ const trivia = new Project(
   "trivia",
   "Trivia Game",
   triviaImg,
-  "A trivia game using data from The Trivia API (https://the-trivia-api.com). I originally built this project using Vanilla JS and recently refactored it using React to practice using the useReducer hook and state management. In this project I also practiced using array methods, using timers and randomizing data.",
+  "A trivia game using data from The Trivia API (https://the-trivia-api.com). I originally built this project using Vanilla JS and recently refactored it using React to practice state management using React Context and the useReducer hook and also to get more practice with React Router. In this project I also practiced using timers and randomizing data.",
   ["featured", "independent"]
 );
 
-const calc = new Project(
-  "calc",
-  "Calculator",
-  calcImg,
-  "I designed this simple calculator to practice basic Javascript concepts. This was my first independent project using event handlers and DOM manipulation.",
-  ["independent"]
-);
+// const calc = new Project(
+//   "calc",
+//   "Calculator",
+//   calcImg,
+//   "I designed this simple calculator to practice basic Javascript concepts. This was my first independent project using event handlers and DOM manipulation.",
+//   ["independent"]
+// );
 
 const crux = new Project(
   "crux",
   "Climbing Gym Website",
   cruxImg,
-  "This was my first web project using HTML and CSS. I learned and practied BEM conventions, using CSS helper classes, webpage performance analysis using Lighthouse, image optimization, semantic HTML and best practices for accessbility.",
+  "This was my first project using HTML and CSS. I learned and practied BEM conventions, using CSS helper classes, Flexbox, CSS Grid, performance analysis using Lighthouse, responsive design and writing media queries, image optimization, using semantic HTML and best practices for accessbility.",
   ["featured", "independent"]
 );
 
@@ -79,7 +79,7 @@ const weather = new Project(
   "weather",
   "Weather App",
   weatherImg,
-  "A simple weather app to practice using APIs, error handling and async actions using Redux. I used the Axios HTTP library to fetch data from four different API sources and an external package (lunarphase-js) for lunar data. I originally built this app using vanilla JavaScript and recently converted it to a React application where I practiced reviewing, refactoring and optimizing existing code.  ",
+  "A simple weather app to practice using APIs, error handling and async actions using Redux. I used the Axios HTTP library to fetch data from four different API sources and an external package (lunarphase-js) for lunar data. I originally built this app using Vanilla JavaScript and recently converted it to a React application where I practiced reviewing, refactoring and optimizing existing code.",
   ["featured", "independent"]
 );
 
@@ -87,7 +87,7 @@ const personalWebsite = new Project(
   "personal-website",
   "Personal Website",
   personalWebsiteImg,
-  "I built this website to serve as my web developer portfolio. It is built with React and uses React Router. I practiced building reusable react components, react hooks, using the context API and using the intersection observer API.",
+  "I built this website to serve as my web developer portfolio. It is built with React and uses React Router. I practiced building reusable react components, react hooks, using React Context and using the intersection observer API.",
   ["independent"]
 );
 
@@ -131,7 +131,7 @@ const cocktails = new Project(
   "cocktails",
   "Cocktails DB",
   cocktailsImg,
-  "An app built with React for searching and displaying details for cocktails, completed as a part of John Smilga's React course on Udemy. In this project I practiced building react components, react hooks, react router, fetching data and using the context API.",
+  "An app built with React for searching and displaying details for cocktails, completed as a part of John Smilga's React course on Udemy. In this project I practiced building react functional components, react hooks, react router, fetching data and using the context API.",
   ["educational"]
 );
 
@@ -143,7 +143,7 @@ export const projects = [
   forkify,
   weather,
   trivia,
-  calc,
+  // calc,
   crux,
   natours,
   nexter,
